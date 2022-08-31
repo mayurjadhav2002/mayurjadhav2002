@@ -6,7 +6,7 @@ beside programming, I do like spend some time on No-code Ethical Hacking and Wat
 
 - I have spend more time doing software development🧑‍💻 things than working with data. But I am Still very Good playing with Data than the SWE. 
 - Sketching 🎨 is my another hobby and I keep this as a secrete🤫.
-- Contributed Open Source Projects (https://www.svgrepo.com/show/349460/openbenches.svg).
+- Contributed Open Source Projects.
 - Consistently write on [Medium](https://hackwell-school.medium.com/). (Techy-Writer😎)
 
 ## 🧑‍💻Languages and Tools👨‍🔧
@@ -15,7 +15,7 @@ beside programming, I do like spend some time on No-code Ethical Hacking and Wat
 
 ## 🖇️Connect with me
 <p align="left">
-<a href="https://twitter.com/MayurJa16744138" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="" height="30" width="40" /></a>
+<a href="https://twitter.com/MayurJa16744138" target="blank"><img align="center" style="color:skyblue;" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="" height="30" width="40" /></a>
 <a href="https://www.linkedin.com/in/mayur-jadhav-1824251aa/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="" height="30" width="40" /></a>
 <a href="https://www.instagram.com/mayurjadhav2002_/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="" height="30" width="40" /></a>
 <a href="https://hackwell-school.medium.com/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg" alt="" height="30" width="40" /></a>
