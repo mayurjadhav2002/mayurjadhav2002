@@ -17,8 +17,8 @@ beside programming, I do like spend some time on No-code Ethical Hacking and Wat
 ## 🖇️Connect with me
 <p align="left">
 <a href="https://twitter.com/MayurJa16744138" target="blank"><img align="center" style='color:skyblue;' src="https://www.svgrepo.com/show/176772/twitter-social-media.svg" alt="" height="30" width="40" /></a>
-<a href="https://www.linkedin.com/in/mayur-jadhav-1824251aa/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="" height="30" width="40" /></a>
-<a href="https://www.instagram.com/mayurjadhav2002_/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="" height="30" width="40" /></a>
-<a href="https://hackwell-school.medium.com/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg" alt="" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/mayur-jadhav-1824251aa/" target="blank"><img align="center" src="https://www.svgrepo.com/show/176736/linkedin-social-media.svg" alt="" height="30" width="40" /></a>
+<a href="https://www.instagram.com/mayurjadhav2002_/" target="blank"><img align="center" src="https://www.svgrepo.com/show/157806/instagram.svg" alt="" height="30" width="40" /></a>
+<a href="https://hackwell-school.medium.com/" target="blank"><img align="center" src="https://www.svgrepo.com/show/349449/medium.svg" alt="" height="30" width="40" /></a>
 </p>
 
