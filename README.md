@@ -5,7 +5,7 @@ I am Full Stack Software Developer and Data Scientist📈 (🤫*Although Deep Le
 beside programming, I do like spend some time on No-code Ethical Hacking and Watching Tutorials.
 
 - I have spend more time doing software development🧑‍💻 things than working with data. But I am Still very Good playing with Data than the SWE. 
-- Sketching 🎨 is my another hobby and I keep this as a secrete🤫.
+- Sketching 🎨 is my another hobby and I keep this as a secret🤫.
 - Contributed Open Source Projects.
 - Consistently write on [Medium](https://hackwell-school.medium.com/). (Techy-Writer😎)
 
