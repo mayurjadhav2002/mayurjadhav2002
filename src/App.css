@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+.scroll-below{
+  animation: scroll infinite 1s infinite;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes scroll {
+  0%{
+    margin-top: 10px;
+  }
+  50%{
+    margin-top: 15px;
+  }
+  100%{
+    margin-top: -25px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hr{
+  margin-top: -30px !important;
+}
+.new-grow{
+  -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+  transition: width 1s  ease-out;
+  width : 0%;
+}
+.grow{
+  width:100%;
+}
+.hr1{
+  margin-left:0;
+}
+.hr2{
+  margin-right:0;
+}
+hr{
+  margin-top: 20px;
+  padding: 2px 0;
+  border: none;
+  background-color: rgb(250, 150, 0);
+  letter-spacing: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.tracking-in-contract-bck-bottom{-webkit-animation:tracking-in-contract-bck-bottom 1s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-contract-bck-bottom 1s cubic-bezier(.215,.61,.355,1.000) both}

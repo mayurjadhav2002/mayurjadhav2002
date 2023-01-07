@@ -1,0 +1,23 @@
+.glass{
+/* From https://css.glass */
+background: rgba(203, 244, 247, 0.35);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.8px);
+-webkit-backdrop-filter: blur(8.8px);
+
+cursor: pointer;
+
+}
+.glass2{
+    background: rgba(201, 220, 221, 0.35);
+border-radius: 50%;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.8px);
+-webkit-backdrop-filter: blur(8.8px);
+cursor: pointer;
+}
+.myImage{
+    box-shadow: 0 0 18px 80px white inset;
+
+}
