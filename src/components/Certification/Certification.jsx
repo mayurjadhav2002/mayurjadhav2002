@@ -12,7 +12,7 @@ export default function Certification() {
      <br/>
      <div className='grid certficate-courosol md:grid-cols-2 w-5/6 flex-wrap   lg:grid-cols-4 sm:grid-cols-1 justify-center content-center gap-4 mx-auto' >
      <div className="card w-5/6 bg-base-100 shadow-xl image-full mx-auto">
-  <figure><img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~TBGSJYJZDN5A/CERTIFICATE_LANDING_PAGE~TBGSJYJZDN5A.jpeg" loading='lazy' alt="Shoes" /></figure>
+  <figure><img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~TBGSJYJZDN5A/CERTIFICATE_LANDING_PAGE~TBGSJYJZDN5A.jpeg" loading='lazy' alt="certificate" /></figure>
   <div className="card-body">
     <h2 className="card-title">Coursera | JHU</h2>
     <p>The Data Science ToolBox</p>
@@ -33,7 +33,7 @@ export default function Certification() {
 </div>
 
 <div className="card w-5/6  bg-base-100 shadow-xl image-full mx-auto">
-  <figure><img src="/assets/kaggle certificate.png" alt="Shoes" /></figure>
+  <figure><img src="/assets/kaggle certificate.png" alt="certificate" loading="lazy" /></figure>
   <div className="card-body">
     <h2 className="card-title">Kaggle </h2>
     <p>Data Cleaning</p>
@@ -46,7 +46,7 @@ export default function Certification() {
 </div>
 
 <div className="card w-5/6  bg-base-100 shadow-xl image-full mx-auto">
-  <figure><img src="assets/responsive web design.png" alt="Shoes" /></figure>
+  <figure><img src="assets/responsive web design.png" alt="certificate" loading="lazy" /></figure>
   <div className="card-body">
     <h2 className="card-title">FreeCodeCamp | Web Design</h2>
     <p>Responsive web design</p>

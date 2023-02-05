@@ -21,7 +21,8 @@ export default function Work() {
      
      <div className="flex justify-center mt-5 mb-5">
      <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
-       <img className=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://play-lh.googleusercontent.com/UqiaMYhCLH0q9KTWkSCKJYYLIL6c0lmon37X9p83htfTkko4aLkXgX51y8pBoDSCNUs" loading='lazy' alt="" />
+       <img className=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+        src="https://play-lh.googleusercontent.com/UqiaMYhCLH0q9KTWkSCKJYYLIL6c0lmon37X9p83htfTkko4aLkXgX51y8pBoDSCNUs" loading='lazy' alt="" />
        <div className="p-6 flex flex-col justify-start">
          <h5 className="text-gray-900 text-xl font-medium">Chegg Expert</h5>
          <h6 classNameName='text-gray-500'>Computer Science Expert</h6>

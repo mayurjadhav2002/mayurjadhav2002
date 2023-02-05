@@ -7,6 +7,8 @@ import Projects from './components/Projects/Projects';
 import Techstack from './components/Techstack/Techstack';
 import $ from 'jquery';
 import Aos from 'aos';
+import 'animate.css';
+
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Work from './components/Work/Work';
 import Footer from './components/Footer/Footer';
@@ -16,9 +18,10 @@ function App() {
   return (
 
 
-    <div className='overflow-x-hidden'>
+    <div className='overflow-hidden'>
       <Header />
-      <Hero />
+  <Hero />
+  
       <marquee className='translate-y-0  rotate-3 overflow-hidden bg-gradient-to-r from-blue-400 to-red-400 hue-rotate-1 text-white font-bold' 
       direction="right" loop='-1' height="auto" width="100%" scrollamount='10'>
       悲しい時には 町のはずれで
