@@ -63,7 +63,7 @@ export default function Projects() {
               Zenith - an advanced Chatbot
               </p>
               <p className="mb-5 text-gray-700">
-              the code runs a loop that prompts the user for input and generates a response using the defined functions.
+              The code runs a loop that prompts the user for input and generates a response using the defined functions.
               The chatbot is able to effectively answer a wide range of questions and provide information to the user.
               </p>
               </a>
@@ -142,7 +142,7 @@ using a convolutional neural network (CNN).
                   "
                   className="inline-block mb-3 text-2xl font-bold leading-7 text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
-                Projects
+                URL Shortner
 
                 </p>
                 <p className="mb-5 text-gray-700">

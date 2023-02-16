@@ -5,8 +5,6 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@material-ui/icons": "^4.11.3",
-    "@material-ui/lab": "^4.0.0-alpha.61",
     "@mui/material": "^5.11.3",
     "@react-google-maps/api": "^2.12.1",
     "@testing-library/jest-dom": "^5.16.4",
