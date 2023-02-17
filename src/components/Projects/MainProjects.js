@@ -3,7 +3,7 @@ import React from 'react'
 function MainProjects() {
   return (
     <div className="py-1 grid gap-2 lg:grid-cols-5 md:grid-cols-2 lg:max-w-full">
-    <div className="p-8 mx-auto max-w-fit  bg-white border hover:shadow-lg rounded shadow-sm">
+    <div className="px-6 py-4 mx-auto max-w-fit  bg-white border hover:shadow-lg rounded shadow-sm">
     <a
     href="https://github.com/mayurjadhav2002/React-CCourse-Udemy"
     target='blank'
@@ -30,7 +30,7 @@ function MainProjects() {
     </div>
 
 
-      <div className="p-8 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
+      <div className="px-6 py-4 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
       <a
       href="https://github.com/mayurjadhav2002/Udemy-Coupons-API"
       target='blank'
@@ -62,7 +62,7 @@ function MainProjects() {
 
 
 
-      <div className="p-8 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
+      <div className="px-6 py-4 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
       <a
       href="/"
       target='blank'
@@ -93,7 +93,7 @@ function MainProjects() {
 
 
 
-      <div className="p-8 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
+      <div className="px-6 py-4 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
       <a
       href="/"
       target='blank'
@@ -121,7 +121,7 @@ function MainProjects() {
       </div>
       
 
-      <div className="p-8 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
+      <div className="px-6 py-4 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
       <a
       href="https://github.com/mayurjadhav2002/covid-19"
       target='blank'
@@ -143,7 +143,7 @@ function MainProjects() {
         developed a website using PHP that connects COVID-19 patients and organizations through a platform. On the website, organizations can share information about resources they have available, such as oxygen, blood, and hospital availability.         </p>
         </a>
       </div>
-      <div className="p-8 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
+      <div className="px-6 py-4 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
       <a
       href="https://github.com/mayurjadhav2002/Udemy-Coupons-API"
       target='blank'

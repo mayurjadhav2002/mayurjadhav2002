@@ -16,7 +16,7 @@ export default function Projects() {
          
             <div className="grid gap-2 lg:grid-cols-5 md:grid-cols-2 lg:max-w-full">
          
-            <div className="p-8 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
+            <div className="px-6 py-4 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
             <a
             href="https://github.com/mayurjadhav2002/Emotion-detection-NLP"
             target='blank'
@@ -43,7 +43,7 @@ export default function Projects() {
             </div>
 
 
-            <div className="p-8 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
+            <div className="px-6 py-4 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
             <a
             href="https://github.com/mayurjadhav2002/ZENITH"
             target='blank'
@@ -70,7 +70,7 @@ export default function Projects() {
             </div>
 
 
-            <div className="p-8 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
+            <div className="px-6 py-4 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
             <a
             href="https://github.com/mayurjadhav2002/flask_url_shortner"
             target='blank'
@@ -98,7 +98,7 @@ export default function Projects() {
             </div>
 
 
-            <div className="p-8 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
+            <div className="px-6 py-4 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
             <a
             href="https://github.com/mayurjadhav2002/Potato-Disease-Classification-app"
             target='blank'
@@ -125,7 +125,7 @@ using a convolutional neural network (CNN).
             </div>
 
 
-              <div className="p-8 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
+              <div className="px-6 py-4 mx-auto  bg-white border hover:shadow-lg rounded shadow-sm">
               <a
               href="https://github.com/mayurjadhav2002/flask_url_shortner"
               target='blank'
@@ -142,7 +142,7 @@ using a convolutional neural network (CNN).
                   "
                   className="inline-block mb-3 text-2xl font-bold leading-7 text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
-                Projects
+                URL Shortner
 
                 </p>
                 <p className="mb-5 text-gray-700">

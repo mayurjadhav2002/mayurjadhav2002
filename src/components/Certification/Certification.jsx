@@ -10,8 +10,9 @@ export default function Certification() {
     Certificates
      </h2>
      <br/>
-     <div className='grid certficate-courosol md:grid-cols-2 w-5/6 flex-wrap   lg:grid-cols-4 sm:grid-cols-1 justify-center content-center gap-4 mx-auto' >
-     <div className="card w-5/6 bg-base-100 shadow-xl image-full mx-auto">
+     <div className='grid certficate-courosol md:grid-cols-2 w-5/6 flex-wrap  
+      lg:grid-cols-5 sm:grid-cols-1 justify-center content-center gap-4 mx-auto' >
+     <div className="card bg-base-100 shadow-xl image-full mx-auto">
   <figure><img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~TBGSJYJZDN5A/CERTIFICATE_LANDING_PAGE~TBGSJYJZDN5A.jpeg" loading='lazy' alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">Coursera | JHU</h2>
@@ -21,7 +22,7 @@ export default function Certification() {
     </div>
   </div>
 </div>
-<div className="card w-5/6 image-full  bg-base-100 shadow-xl mx-auto">
+<div className="card image-full  bg-base-100 shadow-xl mx-auto">
   <figure><img src="assets/cognitive.png" alt="Cognitive class" loading='lazy' /></figure>
   <div className="card-body">
     <h2 className="card-title">Cognitive.ai | Python101</h2>
@@ -32,7 +33,7 @@ export default function Certification() {
   </div>
 </div>
 
-<div className="card w-5/6  bg-base-100 shadow-xl image-full mx-auto">
+<div className="card  bg-base-100 shadow-xl image-full mx-auto">
   <figure><img src="/assets/kaggle certificate.png" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">Kaggle </h2>
@@ -45,7 +46,7 @@ export default function Certification() {
   </div>
 </div>
 
-<div className="card w-5/6  bg-base-100 shadow-xl image-full mx-auto">
+<div className="card  bg-base-100 shadow-xl image-full mx-auto">
   <figure><img src="assets/responsive web design.png" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">FreeCodeCamp | Web Design</h2>
@@ -56,7 +57,7 @@ export default function Certification() {
     </div>
   </div>
 </div>
-<div className="card w-5/6 bg-base-100 shadow-xl image-full mx-auto">
+<div className="card bg-base-100 shadow-xl image-full mx-auto">
 <figure><img src="assets/cognitiveclassmysql.png" alt="cognitiveclassmysql.png" /></figure>
 <div className="card-body">
   <h2 className="card-title">CognitiveClass | MySQL</h2>
@@ -66,7 +67,7 @@ export default function Certification() {
   </div>
 </div>
 </div>
-<div className="card w-5/6 bg-base-100 shadow-xl image-full mx-auto">
+<div className="card bg-base-100 shadow-xl image-full mx-auto">
 <figure><img src="https://udemy-certificate.s3.amazonaws.com/image/UC-e16825b2-af4d-48ab-9ca7-a458c579b858.jpg" alt="Udemy" /></figure>
 <div className="card-body">
   <h2 className="card-title">Udemy | JS</h2>
@@ -76,7 +77,7 @@ export default function Certification() {
   </div>
 </div>
 </div>
-<div className="card w-5/6 bg-base-100 shadow-xl image-full mx-auto">
+<div className="card bg-base-100 shadow-xl image-full mx-auto">
 <figure><img src="assets/cognitiveclasssql.png" loading='lazy' alt="Udemy SQL" /></figure>
 <div className="card-body">
   <h2 className="card-title">CognitiveClass | SQL</h2>
@@ -86,7 +87,7 @@ export default function Certification() {
   </div>
 </div>
 </div>
-<div className="card w-5/6 bg-base-100 shadow-xl image-full mx-auto">
+<div className="card bg-base-100 shadow-xl image-full mx-auto">
 <figure><img src="assets/hackerrankpython.png" alt="HackerRank" /></figure>
 <div className="card-body">
   <h2 className="card-title">HackerRank | Python</h2>
