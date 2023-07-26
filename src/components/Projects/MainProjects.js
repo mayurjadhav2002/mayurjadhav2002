@@ -209,7 +209,7 @@ using a convolutional neural network (CNN).
       className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
       aria-label="Category"
     >
-        <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
+        <p className="mb-3 flex justify-between text-xs font-semibold tracking-wide uppercase">
           <span className="text-gray-600">— April 2021</span>
           <Link className='flex' to="/"> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="mr-1 bi bi-code-slash" viewBox="0 0 16 16">

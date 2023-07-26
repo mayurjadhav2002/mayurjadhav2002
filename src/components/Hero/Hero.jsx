@@ -52,7 +52,7 @@ function Hero() {
                 </span>
               </h1>
               <p className="text-gray-700 text-lg text-center md:text-lg">
-                Hey hii there, I am software developer with expertise in Python, Javascript, PHP, and Web Development.You know, I possess knowledge of
+                Hey hii there, I am software developer with expertise in Python, Javascript, PHP, and APIs.You know, I possess knowledge of
 well-known frameworks like React, Flask, and NodeJS.
                 <p className='lg:hidden md:hidden my-2 text-sm text-blue-500 text-center'>
                 
