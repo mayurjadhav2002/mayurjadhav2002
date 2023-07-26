@@ -21,14 +21,17 @@ export default function About() {
             </h2>
             <div className="text-base text-gray-700 md:text-lg break-normal">
             <p>
-            Hi there, my name is Mayur Jadhav and I am a third year computer science student at Mumbai University. My primary focus of interest is in the field of machine learning and artificial intelligence, and I am deeply passionate about using technology to solve real-world problems.
+            Hi, my name is Mayur Jadhav and I am a Final year Computer Science student at Mumbai University. 
+            My primary focus of interest is in the field of Software Development, Machine learning and DL, and I am deeply passionate about using technology to solve real-world problems.
 </p>
 <br></br>
 <p>
-            During my time at university, I have developed a strong foundation in computer science principles and have acquired expertise in a variety of programming languages, algorithms, and data structures. I am eager to continue learning and expanding my knowledge in the field of machine learning and artificial intelligence, and am excited to explore opportunities to apply my skills in internships or other practical settings.
+            During my time at university, I have developed a strong foundation in computer science principles and have acquired expertise in a variety of programming languages, algorithms, and data structures. I am eager to continue learning and expanding my knowledge in the field of Software Engineering & AI, and am excited to explore challenges to apply my skills practical settings.
             </p>
             <br></br><p>    
-            In addition to my technical skills, I am a proactive and team-oriented individual who enjoys collaborating with others to tackle complex challenges. I am always seeking out ways to improve my skills and knowledge, and in my free time, I enjoy participating in hackathons and coding competitions. I am open to new opportunities and am excited to connect with like-minded professionals in the field. beside programming, I do like spend some time on No-code Ethical Hacking and Watching Tutorials.
+            In addition to my technical skills, I am a proactive and result-oriented individual who enjoys collaborating with others to tackle complex challenges.
+             I always seeking out ways to improve my skills and knowledge, and in my free time, I enjoy participating in hackathons and coding competitions. 
+            beside programming, I do like spend some time on No-code Ethical Hacking and Watching Tutorials.
             </p>
             </div>
           </div>

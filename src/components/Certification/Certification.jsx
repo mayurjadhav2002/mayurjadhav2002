@@ -1,5 +1,6 @@
 import React from 'react'
 import './Style.css';
+import { Link } from 'react-router-dom';
 
 export default function Certification() {
  
@@ -17,7 +18,7 @@ export default function Certification() {
     <h2 className="card-title">Coursera | JHU</h2>
     <p>The Data Science ToolBox</p>
     <div className="card-actions justify-end">
-      <a target="_blank" rel='noreferrer'  href="https://www.coursera.org/account/accomplishments/verify/TBGSJYJZDN5A" className="btn btn-primary">Verify?</a>
+      <Link target="_blank" rel='noreferrer'  to="https://www.coursera.org/account/accomplishments/verify/TBGSJYJZDN5A" className="btn btn-primary">See</Link>
     </div>
   </div>
 </div>
@@ -27,7 +28,7 @@ export default function Certification() {
     <h2 className="card-title">Cognitive.ai | Python101</h2>
     <p>Python 101 for Data Science</p>
     <div className="card-actions justify-end">
-      <a target="_blank" rel='noreferrer'  href='https://courses.cognitiveclass.ai/certificates/544423c5daad47848b58a7215501ba50' className="btn btn-primary">Verify Now</a>
+      <Link target="_blank" rel='noreferrer'  to='https://courses.cognitiveclass.ai/certificates/544423c5daad47848b58a7215501ba50' className="btn btn-primary">See</Link>
     </div>
   </div>
 </div>
@@ -38,9 +39,9 @@ export default function Certification() {
     <h2 className="card-title">Kaggle </h2>
     <p>Data Cleaning</p>
     <div className="card-actions justify-end">
-      <a target="_blank" rel='noreferrer'
-      href='https://www.kaggle.com/learn/certification/mayuronkaggle/data-cleaning' className="btn btn-primary">
-      verify Now</a>
+      <Link target="_blank" rel='noreferrer'
+      to='https://www.kaggle.com/learn/certification/mayuronkaggle/data-cleaning' className="btn btn-primary">
+      See</Link>
     </div>
   </div>
 </div>
@@ -51,8 +52,9 @@ export default function Certification() {
     <h2 className="card-title">FreeCodeCamp | Web Design</h2>
     <p>Responsive web design</p>
     <div className="card-actions justify-end">
-      <a href='https://www.freecodecamp.org/certification/mayurjadhav/responsive-web-design' rel='noreferrer' target="_blank" className="btn btn-primary">Verify Now
-      </a>
+      <Link to='https://www.freecodecamp.org/certification/mayurjadhav/responsive-web-design' rel='noreferrer' target="_blank" className="btn btn-primary">
+      See
+      </Link>
     </div>
   </div>
 </div>
@@ -62,7 +64,7 @@ export default function Certification() {
   <h2 className="card-title">CognitiveClass | MySQL</h2>
   <p>MySQL command Line</p>
   <div className="card-actions justify-end">
-    <a href='https://courses.cognitiveclass.ai/certificates/0d539d2600714e39a991df0c4e6948a1' className="btn btn-primary">Verify Now</a>
+    <Link href='https://courses.cognitiveclass.ai/certificates/0d539d2600714e39a991df0c4e6948a1' className="btn btn-primary" target='_blank'>See</Link>
   </div>
 </div>
 </div>
@@ -72,7 +74,7 @@ export default function Certification() {
   <h2 className="card-title">Udemy | JS</h2>
   <p>CSS and Javascript Crash Course</p>
   <div className="card-actions justify-end">
-    <a href='https://www.udemy.com/certificate/UC-e16825b2-af4d-48ab-9ca7-a458c579b858/' target="_blank" rel='noreferrer' className="btn btn-primary">Verify Now</a>
+    <Link href='https://www.udemy.com/certificate/UC-e16825b2-af4d-48ab-9ca7-a458c579b858/' target="_blank" rel='noreferrer' className="btn btn-primary">See</Link>
   </div>
 </div>
 </div>
@@ -82,7 +84,7 @@ export default function Certification() {
   <h2 className="card-title">CognitiveClass | SQL</h2>
   <p>SQL and Relational Databases</p>
   <div className="card-actions justify-end">
-    <a href='https://courses.cognitiveclass.ai/certificates/70598f3b55584acca713fa0010df45ab' target="_blank" rel='noreferrer' className="btn btn-primary">Verify Now</a>
+    <Link href='https://courses.cognitiveclass.ai/certificates/70598f3b55584acca713fa0010df45ab' target="_blank" rel='noreferrer' className="btn btn-primary">See</Link>
   </div>
 </div>
 </div>
@@ -92,7 +94,7 @@ export default function Certification() {
   <h2 className="card-title">HackerRank | Python</h2>
   <p>Python Bootcamp</p>
   <div className="card-actions justify-end">
-    <a href='https://www.hackerrank.com/certificates/0694edae1426' target="_blank" rel='noreferrer' className="btn btn-primary">Verify Now</a>
+    <Link to='https://www.hackerrank.com/certificates/0694edae1426' target="_blank" rel='noreferrer' className="btn btn-primary">See</Link>
   </div>
 </div>
 </div>
