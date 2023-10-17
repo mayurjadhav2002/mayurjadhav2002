@@ -1,11 +1,11 @@
 
 # Hey Hii👋 there, I am [**Mayur**](https://www.linkedin.com/in/mayur-jadhav-1824251aa/)!
-Hello My Name is Mayur and I am Third Year Bachelor's Student at University of Mumbai, majoring in Computer Science and Engineering.
-I am Full Stack Software Developer and Data Scientist📈 (🤫*Although Deep Learning Interest me more*).
-beside programming, I do like spend some time on No-code Ethical Hacking and Watching Tutorials.
+Hello, My Name is Mayur and I am a Final Year Undergraduate Student at the University of Mumbai, majoring in Computer Science and Engineering.
+I am a Full Stack Software Developer and Data Scientist📈 (🤫*Although ML interests me more*).
+besides programming, I do like to spend some time on No-code Ethical Hacking and Watching Tutorials.
 
-- I have spend more time doing software development🧑‍💻 things than working with data. But I am Still very Good playing with Data than the SWE. 
-- Sketching 🎨 is my another hobby and I keep this as a secret🤫.
+- I have spent more time doing software development🧑‍💻 things than working with data. But I am still very good at playing with Data than the SWE. 
+- Sketching 🎨 is my other hobby and I keep this a secret🤫.
 - Contributed Open Source Projects.
 - Consistently write on [Medium](https://hackwell-school.medium.com/). (Techy-Writer😎)
 
