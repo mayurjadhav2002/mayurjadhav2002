@@ -53,7 +53,7 @@ export default function Header() {
         <Navbar.Collapse className="navbar-links m-4">
          
         <Navbar.Link >
-        <Link to="https://drive.google.com/file/d/1oBdBX3oWXJFnB5Qg4hG9dUz9gH-wMPba/view?usp=sharing" target='_blank'>
+        <Link to="https://drive.google.com/file/d/1bYIogb0LKWxxpG7A9LdIiiSRVkjW24P7/view?usp=drivesdk" target='_blank'>
         CV/Resume
 
         </Link>
