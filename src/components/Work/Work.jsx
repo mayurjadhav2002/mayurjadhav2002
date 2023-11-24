@@ -12,10 +12,10 @@ export default function Work() {
       }}>
       <div className=''>
         <h2 className="animate__fadeInUp animate__animated font-sans text-5xl lg:text-6xl font-bold text-center text-gray-300 sm:text-3xl sm:leading-none">
-          Volunteer
+          Work
         </h2>
         <h2 className="animate__fadeInUp animate__animated font-sans text-3xl lg:text-6xl font-bold text-center text-gray-900 sm:text-3xl sm:leading-none">
-          Work
+          Experience
         </h2>
 
 
@@ -23,7 +23,7 @@ export default function Work() {
 
 
         <div className="flex flex-col my-3 md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
-        <img className=" w-full h-96 md:h-auto object-cover bg-blue-900 lg:object-cover md:w-48 bg-dark rounded-t-lg md:rounded-none md:rounded-l-lg"
+        <img className=" w-full h-40 lg:h96 md:h-auto object-fit bg-blue-900 lg:object-fit md:w-48 bg-dark rounded-t-lg md:rounded-none md:rounded-l-lg"
           src="https://www.zevo.ai/_next/image?url=%2Fimages%2Flogo%2Flogo-2.png&w=256&q=75" loading='lazy' alt="" />
         <div className="p-6 flex flex-col justify-start">
           <h5 className="text-gray-900 text-xl font-medium">Software Engineer Intern</h5>
@@ -38,7 +38,7 @@ export default function Work() {
       </div>
 
           <div className="flex flex-col my-3 md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
-            <img className=" w-full h-96 md:h-auto object-fit lg:object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+          <img className=" w-full h-40 lg:h96 md:h-auto object-cover bg-blue-900 lg:object-fit md:w-48 bg-dark rounded-t-lg md:rounded-none md:rounded-l-lg"
               src="https://i.postimg.cc/SNGNH1Dc/343942151-1380089226158823-6485076690993314285-n.jpg" loading='lazy' alt="" />
             <div className="p-6 flex flex-col justify-start">
               <h5 className="text-gray-900 text-xl font-medium">Web Developer Intern</h5>
@@ -55,7 +55,7 @@ export default function Work() {
 
 
           <div className="flex flex-col my-3 md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
-            <img className=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+          <img className=" w-full h-40 lg:h96 md:h-auto object-scale-down bg-blue-900 lg:object-fit md:w-48 bg-dark rounded-t-lg md:rounded-none md:rounded-l-lg"
               src="https://play-lh.googleusercontent.com/UqiaMYhCLH0q9KTWkSCKJYYLIL6c0lmon37X9p83htfTkko4aLkXgX51y8pBoDSCNUs" loading='lazy' alt="" />
             <div className="p-6 flex flex-col justify-start">
               <h5 className="text-gray-900 text-xl font-medium">Chegg Expert</h5>

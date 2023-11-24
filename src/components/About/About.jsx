@@ -21,20 +21,37 @@ export default function About() {
             </h2>
             <div className="text-base text-gray-700 md:text-lg break-normal">
             <p>
-            Hi, my name is Mayur Jadhav and I am a Final year Computer Science student at Mumbai University. 
-            My primary focus of interest is in the field of Software Development, Machine learning and DL, and I am deeply passionate about using technology to solve real-world problems.
+            I'm Mayur Jadhav, a final-year Computer Science student at Mumbai University. I've got a solid two years of hands-on experience in software development, playing around with cool stuff like Javascript, Python, MERN stack, C, and PHP. I've built desktop apps, mobile apps, websites, and even pitched in on some open source projects.
+
 </p>
 <br></br>
 <p>
-            During my time at university, I have developed a strong foundation in computer science principles and have acquired expertise in a variety of programming languages, algorithms, and data structures. I am eager to continue learning and expanding my knowledge in the field of Software Engineering & AI, and am excited to explore challenges to apply my skills practical settings.
+But it's not just about coding for me. I'm also in the know about operations and cloud technologies like AWS, Google Cloud, Docker, and Kubernetes. So, whether it's writing code or managing projects, I've got it covered.
+
             </p>
             <br></br><p>    
-            In addition to my technical skills, I am a proactive and result-oriented individual who enjoys collaborating with others to tackle complex challenges.
-             I always seeking out ways to improve my skills and knowledge, and in my free time, I enjoy participating in hackathons and coding competitions. 
-            beside programming, I do like spend some time on No-code Ethical Hacking and Watching Tutorials.
-            </p>
+            I've dipped my toes into the AI pool because, honestly, who isn't fascinated by it? I've dabbled in machine learning models, taken on data science projects, and tried my hand at Natural Language Processing. I'm all about making things easier with tech.
+
+</p>
+
+<br></br><p>    
+Internships at Zevo and Cozy Notion taught me how to crank out production-level code. Plus, I've taken on leadership roles, like heading up the coding club and jumping into hackathons. It's been a ride, and it's sharpened my skills and my knack for problem-solving.
+
+
+</p>
+
+<br></br><p>    
+Beyond the tech stuff, I'm always looking to up my game. You'll find me in hackathons and coding competitions during my downtime. And just for kicks, I like to explore No-code Ethical Hacking. Learning is my jam, and I'm all about finding new ways to get better.
+
+
+</p>
             </div>
           </div>
+        
+        </div>
+        <div className='hidden  md:flex md:flex-col gap-12 '>
+       
+          <iframe title="3D UI By Me using Spine" className="object-cover w-full h-56 rounded shadow-lg sm:h-96" src='https://my.spline.design/glasstypecopy-3da608e672b74fc779ccc6bf1c024679/' frameborder='0' width='100%' height='100%'></iframe>
           <div className="grid gap-5 row-gap-8 sm:grid-cols-2">
             <div className="bg-white border-l-4 shadow-sm border-deep-purple-accent-400">
               <div className="h-full p-5 border border-l-0 rounded-r">
@@ -54,17 +71,14 @@ export default function About() {
                   A one who love to write but don't have grammatical Sense
                 </h6>
                 <p className="text-sm text-gray-900">
-                Consistently write on Medium. (Techy-Writer 😎)
+                I enjoy writing but IDK how to write(Techy-Writer 😎)
 
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className='hidden md:block'>
-       
-          <iframe title="3D UI By Me using Spine" className="object-cover w-full h-56 rounded shadow-lg sm:h-96" src='https://my.spline.design/glasstypecopy-3da608e672b74fc779ccc6bf1c024679/' frameborder='0' width='100%' height='100%'></iframe>
-        </div>
+        
       </div>
     </div>
   </div>

@@ -41,7 +41,7 @@ function Hero() {
 
                         .pauseFor(1000)
                         .deleteAll()
-                        .typeString("ML enthusiast")
+                        .typeString("AI enthusiast")
                         .pauseFor(1000)
                         .deleteAll()
                         .typeString(" Mayur Jadhav")
@@ -56,7 +56,7 @@ function Hero() {
 well-known frameworks like React, Flask, and NodeJS.
                 <p className='lg:hidden md:hidden my-2 text-sm text-blue-500 text-center'>
                 
-                <Link to='https://drive.google.com/file/d/1oBdBX3oWXJFnB5Qg4hG9dUz9gH-wMPba/view?usp=sharing' 
+                <Link to='https://drive.google.com/file/d/1bYIogb0LKWxxpG7A9LdIiiSRVkjW24P7/view?usp=drivesdk' 
                 target='_blank'>You Can View My CV/Resume through this link 🔗</Link></p>
               </p>
 
