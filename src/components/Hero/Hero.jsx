@@ -18,15 +18,15 @@ function Hero() {
             <div className="">
               <div>
                 <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider 
-                uppercase bg-teal-accent-400 text-teal-900 md:text-center rounded-full">Learner</p>
+                uppercase bg-teal-accent-400 text-teal-900 md:text-center rounded-full dark:text-white">Learner</p>
               </div>
               <h1 className="font-sans text-center 
-                   text-4xl leading-10 font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none mb-6 ">
+                   text-4xl leading-10 font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none mb-6 dark:text-white ">
 
                 👋 Hello, I'm
 
                 <br className="md:block mt-2 lg:hidden" />
-                <span className='md:inline-block lg:ml-2  text-purple-600 text-deep-purple-accent-400'>
+                <span className='md:inline-block lg:ml-2  text-purple-600 text-deep-purple-accent-400 '>
                   <Typewriter
 
                     onInit={(typewriter) => {
@@ -51,7 +51,7 @@ function Hero() {
                   />
                 </span>
               </h1>
-              <p className="text-gray-700 text-lg text-center md:text-lg">
+              <p className="text-gray-700 text-lg text-center md:text-lg dark:text-white">
                 Hey hii there, I am software developer with expertise in Python, Javascript, PHP, and APIs.You know, I possess knowledge of
 well-known frameworks like React, Flask, and NodeJS.
                 <p className='lg:hidden md:hidden my-2 text-sm text-blue-500 text-center'>

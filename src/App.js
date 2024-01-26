@@ -4,7 +4,7 @@ import Home from './Home'
 
 function App() {
   return (
-    <div>
+    <div className='dark:text-white'>
     <Routes>
         <Route path="/" element={<Home />}>
           <Route index element={<Home />} />
