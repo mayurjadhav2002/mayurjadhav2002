@@ -23,7 +23,7 @@ function Hero() {
                 className="font-sans text-center -ml-5
                    text-4xl leading-10 font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none mb-6 dark:text-white "
               >
-                👋 Hello, I'm
+                👋 Hello, I&apos;m
                 <br className="md:block mt-2 lg:hidden" />
                 <span className="md:inline-block lg:ml-2 m-0 text-blue-600 text-deep-purple-accent-400 ">
                   <Typing />
@@ -122,7 +122,7 @@ function Hero() {
 
           <img
             src={"./img.png"}
-            alt="Hii Image is Here but you can't see!"
+            alt="Hii Image is Here but you can&apos;t see!"
             loading="lazy"
             className=" right-0 bottom-0"
           />

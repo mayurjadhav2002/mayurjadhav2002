@@ -11,44 +11,44 @@ export default function About() {
               </h2>
               <div className="text-base md:text-lg break-normal">
                 <p>
-                  I'm Mayur Jadhav, a final-year Computer Science student at
-                  Mumbai University. I've got a solid two years of hands-on
+                  I&apos;m Mayur Jadhav, a final-year Computer Science student at
+                  Mumbai University. I&apos;ve got a solid two years of hands-on
                   experience in software development, playing around with cool
-                  stuff like Javascript, Python, MERN stack, C, and PHP. I've
+                  stuff like Javascript, Python, MERN stack, C, and PHP. I&apos;ve
                   built desktop apps, mobile apps, websites, and even pitched in
                   on some open source projects.
                 </p>
                 <br></br>
                 <p>
-                  But it's not just about coding for me. I'm also in the know
+                  But it&apos;s not just about coding for me. I&apos;m also in the know
                   about operations and cloud technologies like AWS, Google
-                  Cloud, Docker, and Kubernetes. So, whether it's writing code
-                  or managing projects, I've got it covered.
+                  Cloud, Docker, and Kubernetes. So, whether it&apos;s writing code
+                  or managing projects, I&apos;ve got it covered.
                 </p>
                 <br></br>
                 <p>
-                  I've dipped my toes into the AI pool because, honestly, who
-                  isn't fascinated by it? I've dabbled in machine learning
+                  I&apos;ve dipped my toes into the AI pool because, honestly, who
+                  isn&apos;t fascinated by it? I&apos;ve dabbled in machine learning
                   models, taken on data science projects, and tried my hand at
-                  Natural Language Processing. I'm all about making things
+                  Natural Language Processing. I&apos;m all about making things
                   easier with tech.
                 </p>
 
                 <br></br>
                 <p>
                   Internships at Zevo and Cozy Notion taught me how to crank out
-                  production-level code. Plus, I've taken on leadership roles,
+                  production-level code. Plus, I&apos;ve taken on leadership roles,
                   like heading up the coding club and jumping into hackathons.
-                  It's been a ride, and it's sharpened my skills and my knack
+                  It&apos;s been a ride, and it&apos;s sharpened my skills and my knack
                   for problem-solving.
                 </p>
 
                 <br></br>
                 <p>
-                  Beyond the tech stuff, I'm always looking to up my game.
-                  You'll find me in hackathons and coding competitions during my
+                  Beyond the tech stuff, I&apos;m always looking to up my game.
+                  You&apos;ll find me in hackathons and coding competitions during my
                   downtime. And just for kicks, I like to explore No-code
-                  Ethical Hacking. Learning is my jam, and I'm all about finding ways.
+                  Ethical Hacking. Learning is my jam, and I&apos;m all about finding ways.
                 </p>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function About() {
               <div className="bg-white dark:bg-dark rounded-lg border-l-4 shadow-sm border-deep-purple-accent-400 dark:border-blue-400">
                 <div className="h-full p-5 border border-l-0 rounded-r">
                   <h6 className="mb-2 font-semibold leading-5 text-primary">
-                    I'll be sure to note that in my log
+                    I&apos;ll be sure to note that in my log
                   </h6>
                   <p className="text-sm ">
                     I have spend more time doing software development 👨‍💻 things
@@ -78,7 +78,7 @@ export default function About() {
               <div className="bg-white dark:bg-dark rounded-lg border-l-4 shadow-sm border-deep-purple-accent-400 dark:border-blue-400">
                 <div className="h-full p-5 border border-l-0 rounded-r">
                   <h6 className="mb-2 font-semibold leading-5 text-primary">
-                    A one who love to write but don't have grammatical Sense
+                    A one who love to write but don&apos;t have grammatical Sense
                   </h6>
                   <p className="text-sm">
                     I enjoy writing but IDK how to write(Techy-Writer 😎)

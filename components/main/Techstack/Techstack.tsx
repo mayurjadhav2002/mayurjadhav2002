@@ -8,7 +8,7 @@ export default function Techstack() {
 
                 <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
                     <h1 className="mb-8 p-4 lg:mb-16 text-4xl font-extrabold tracking-tight leading-tight text-center
-                     text-gray-900 dark:text-white">What I've Learned So far!
+                     text-gray-900 dark:text-white">What I&apos;ve Learned So far!
                     <br></br><span className='text-blue-700'><pre></pre>I Can Code in...</span>
                     </h1>
                     <div className="grid lg:grid-cols-7 grid-cols-4 gap-8 text-gray-500 sm:gap-12 md:grid-cols-5 dark:text-gray-400">
