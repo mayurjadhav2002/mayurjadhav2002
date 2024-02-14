@@ -7,8 +7,9 @@ import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/main/Header";
 import Footer from "@/components/main/Footer/Footer";
-import Head from "next/head";
- 
+import { Analytics } from '@vercel/analytics/react';
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 export const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: "Mayur Jadhav",
   description: "Hi! I'm Mayur, a final-year CS student passionate about software dev & machine learning. Let's connect & learn together!",
   authors: [
-    { name: "Mayur Jadhav", url: "https://mayurjadhav.me" }
+    { name: "Mayur Jadhav", url: "https://mayurjadhav2002.vercel.app/" }
   ],
   keywords: "Software Development, Machine Learning, Computer Science, Mumbai University",
 };
@@ -46,7 +47,10 @@ export default function RootLayout({
             <Header/>
             {children}
             <Footer/>
+            
           </ThemeProvider>
+          <Analytics />
+          <GoogleAnalytics gaId="G-8BSK0VJNRH" />
 
         </body>
     </html>
