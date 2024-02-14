@@ -46,7 +46,7 @@ export default function Work() {
           {workData.map((work, index) => (
             <div
               key={index}
-              className="flex flex-col my-3 h-auto lg:h-40 md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg hover:scale-105 hover:duration-500 cursor-pointer"
+              className="flex flex-col my-3 h-auto lg:h-40 md:flex-row md:max-w-xl rounded-lg bg-white dark:bg-dark/50 shadow-lg hover:scale-105 hover:duration-500 cursor-pointer"
             >
               <img
                 className="w-full  md:h-auto h-40   object-cover bg-blue-900 lg:object-fit md:w-48 dark:bg-dark rounded-t-lg md:rounded-none md:rounded-l-lg"
@@ -55,12 +55,12 @@ export default function Work() {
                 alt=""
               />
               <div className="p-6 flex flex-col justify-start">
-                <h5 className="text-gray-900 text-xl font-medium">
+                <h5 className="text-gray-900 text-xl font-medium dark:text-primary">
                   {work.role}
                 </h5>
-                <h6 className="text-gray-500">{work.company}</h6>
-                <p className="text-gray-700 text-base mb-4"></p>
-                <p className="text-gray-600 text-sm flex items-center">
+                <h6 className="text-gray-500 dark:text-gray-200">{work.company}</h6>
+                <p className="text-gray-700  text-base mb-4"></p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm flex items-center">
               <CalendarIcon className="mr-1"/> {" "}
                   {work.date}
                 </p>

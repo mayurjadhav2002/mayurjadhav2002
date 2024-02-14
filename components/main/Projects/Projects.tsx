@@ -119,8 +119,8 @@ export default function Projects() {
   const [showAllProjects, setShowAllProjects] = useState(false);
 
   return (
-    <div className="mt-2 main-div backdrop:shadow-1 shadow-sm-light " id="project">
-      <h2 className="animate__fadeInUp animate__animated font-sans text-3xl font-bold text-center text-gray-900 sm:text-4xl sm:leading-none z-10">
+    <div className="mt-2 main-div backdrop:shadow-1 shadow-sm-light py-10 " id="project">
+      <h2 className="animate__fadeInUp animate__animated font-sans text-3xl font-bold text-center text-gray-900 dark:text-primary sm:text-4xl sm:leading-none z-10">
         📔 Projects
       </h2>
       <div className="p-5 mx-auto md:max-w-full lg:py-20">
@@ -135,7 +135,7 @@ export default function Projects() {
           <div className="text-center justify-end w-full p-3">
             <button
               onClick={() => setShowAllProjects(true)}
-              className="animate__fadeInUp animate__animated font-sans btn btn-outline btn-primary font-bold text-center text-gray-900 "
+              className="animate__fadeInUp animate__animated font-sans btn btn-outline btn-primary font-bold text-center text-gray-900  dark:text-white dark:border-blue-50 dark:border-2 dark:p-5 dark:rounded-lg"
             >
               View More
             </button>
