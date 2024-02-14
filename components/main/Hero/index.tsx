@@ -121,7 +121,7 @@ function Hero() {
           </div>
 
           <img
-            src={"./img.png"}
+            src={"./assets/img.png"}
             alt="Hii Image is Here but you can&apos;t see!"
             loading="lazy"
             className=" right-0 bottom-0"
