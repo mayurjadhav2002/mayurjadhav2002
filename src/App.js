@@ -1,18 +1,15 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Home from './Home'
+import React, { useEffect } from 'react';
 
-function App() {
+function Redirect() {
+  useEffect(() => {
+    window.location.href = 'https://mayurjadhav2002.vercel.app/';
+  }, []);
+
   return (
-    <div className='dark:text-white'>
-    <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<Home />} />
-        
-        </Route>
-      </Routes>
+    <div>
+      <p>Redirecting...</p>
     </div>
-  )
+  );
 }
 
-export default App
+export default Redirect;
