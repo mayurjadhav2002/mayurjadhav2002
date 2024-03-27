@@ -35,7 +35,7 @@ function Hero() {
                 well-known frameworks like React, Flask, and NodeJS.
                 <br/>
                 <Link
-                  href="https://l.linklyhq.com/l/1vyh0"
+                  href="https://l.linklyhq.com/l/1xHte"
                   target="_blank"
                   className="my-2 text-sm text-blue-500 text-center"
                 >

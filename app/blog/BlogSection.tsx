@@ -1,19 +1,14 @@
-import { CalendarIcon } from "@radix-ui/react-icons";
+"use client";
+import React, { useEffect, useState } from "react";
 import moment from "moment";
 import Link from "next/link";
-import React from "react";
 import { CiClock1 } from "react-icons/ci";
-async function getData() {
-  try {
-    const options = {
-      headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_KEY}`,
-      },
-    };
+import { debounce } from "lodash";
 
+async function fetchData() {
+  try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blogs?populate=thumbnail`,
-      options
+      `https://65f1c31b034bdbecc7639fc6.mockapi.io/api/blogs/Blogs?sortBy=createdAt`
     );
 
     if (!res.ok) {
@@ -25,81 +20,126 @@ async function getData() {
     return res.json();
   } catch (error) {
     console.error("Error fetching data:", error);
-    throw error; // rethrow the error to be handled by the caller
+    throw error;
   }
 }
 
-const BlogSection: React.FC = async () => {
-  const data = await getData();
-  if (!data.data) {
+const BlogSection = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchAndSetData = async () => {
+      try {
+        const result = await fetchData();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    // Debounce the API call to avoid making too many requests in a short period
+    const debouncedFetchData = debounce(fetchAndSetData, 1000);
+
+    // Fetch data initially
+    debouncedFetchData();
+
+    return () => {
+      // Clear the debounce timeout when component unmounts
+      debouncedFetchData.cancel();
+    };
+  }, []);
+
+  if (!data) {
     return "Loading";
   }
+
   return (
     <section className="py-20">
-      <h1 className="mb-12 text-center font-sans text-5xl font-bold">
-        Our Blog
-      </h1>
-      <div className="mx-auto grid max-w-screen-lg justify-center px-4 sm:grid-cols-2 sm:gap-4 sm:px-8 md:grid-cols-3">
-        {data.data?.map(
-          (
-            post: {
-              id: Number;
-              attributes: any;
-            },
-            id: React.Key | null | undefined
-          ) => (
-            <Article
-              key={id}
-              imageUrl={`${process.env.NEXT_PUBLIC_BACKEND_URL}${post.attributes.thumbnail.data.attributes.formats.thumbnail.url}`}
-              title={post.attributes.title}
-              description={post.attributes.description}
-              id={post.id}
-              createdAt={moment(post.attributes.createdAt).fromNow()}
-            />
-          )
-        )}
+      
+      <div className="mx-auto grid md:gap-8  justify-center px-4 sm:grid-cols-1 sm:gap-4 sm:px-8 md:grid-cols-4">
+ 
+        {data.map((post: { id: React.Key | null | undefined; }) => (
+          <Article key={post.id} post={post} />
+        ))}
       </div>
     </section>
   );
 };
 
-interface ArticleProps {
-  imageUrl: string;
-  title: string;
-  description: string;
-  id: Number;
-  createdAt: String;
-}
+const Article = ({ post }) => {
+  const { thumbnail, blog_title, blog_description, id, createdAt, category } =
+    post;
 
-const Article: React.FC<ArticleProps> = ({
-  imageUrl,
-  title,
-  id,
-  createdAt,
-}) => {
   return (
-    <article
-      className="mx-auto my-4 flex w-full flex-col overflow-hidden rounded-2xl border border-gray-300 bg-white 
-    dark:bg-black dark:border-dark/70 shadow-lg dark:shadow-xl dark:hover:shadow-green-500/50 dark:shadow-current
-    text-gray-900 transition hover:scale-105 hover:shadow-lg"
-    >
-      <Link href={`blog/${title.toLowerCase().replace(/\s+/g, "-")}/${id}`}>
-       
-        <img src={imageUrl} className="h-56 w-full object-cover" alt="" />
-        <div className="absolute p-2 bg-primary/90 rounded-r-md -mt-5 flex justify-center items-center gap-2">
-          <CiClock1 className="w-3 h-3  text-white dark:text-black " />{" "}
-          <span className="text-xs text-white dark:text-black font-semibold">
-            {createdAt}
-          </span>
-        </div>
-        <div className="flex-auto px-6 pb-4">
-          <h3 className="mt-4 mb-3 text-lg font-semibold xl:text-xl dark:text-white">
-            {title}
-          </h3>
-          <span className="inline-block cursor-pointer select-none rounded-full border border-gray-800 bg-gray-800 px-2 py-1 text-center align-middle text-sm font-semibold leading-normal text-white no-underline shadow-sm">
-            Learn More
-          </span>
-        </div>
+    <article className="">
+      <Link
+        href={`blog/${blog_title.toLowerCase().replace(/\s+/g, "-")}/${id}`}
+      >
+        <>
+          <div className="relative  rounded-lg  border-black/50 border-2 flex justify-center items-center">
+            <div className="w-full shadow-lg transition duration-500 hover:shadow-3xl hover:shadow-blue-700">
+              <div className="flex gap-16  px-4 py-3 justify-between">
+                <div className="flex  items-center space-x-2">
+                  <img
+                    className="w-8 rounded-full "
+                    src="https://avatars.githubusercontent.com/u/63432459?v=4"
+                    alt="sara"
+                  />
+                  <h2 className="text-gray-800 font-semibold cursor-pointer">
+                    Mayur Jadhav
+                  </h2>
+                </div>
+                <div className="flex space-x-2">
+                  <div className="flex space-x-1 items-center">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-7 w-7 text-gray-600 cursor-pointer"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                        />
+                      </svg>
+                    </span>
+                    <span>22</span>
+                  </div>
+                </div>
+              </div>
+
+              <img
+                src={thumbnail}
+                className="w-full cursor-pointer border-y-[1px] border-x-0 border-dark"
+                alt=""
+              />
+              <div>
+                <div className="absolute p-2 bg-primary/90 rounded-r-md -mt-10 flex justify-center items-center gap-2">
+                  <CiClock1 className="w-3 h-3  text-white dark:text-black " />
+                  <span className="text-xs text-white dark:text-black font-semibold">
+                    {moment(createdAt).fromNow()}
+                  </span>
+                </div>
+                <div className="absolute right-0 p-2 bg-green-700/90 rounded-l-md -mt-10 flex justify-center items-center gap-2">
+                  <CiClock1 className="w-3 h-3  text-white dark:text-black " />
+                  <span className="text-xs text-white dark:text-black font-semibold">
+                    {category}
+                  </span>
+                </div>
+              </div>
+
+              <div className="my-5">
+                <h1 className="text-xl  px-4 font-semibold text-gray-800 cursor-pointer hover:text-gray-900 transition duration-100">
+                  {blog_title}
+                </h1>
+              </div>
+            </div>
+          </div>
+        </>
       </Link>
     </article>
   );

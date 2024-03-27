@@ -3,16 +3,10 @@ import moment from "moment";
 import { Key } from "react";
 async function getData() {
   try {
-    const options = {
-      headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_KEY}`,
-      },
-    };
+
 
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blogs?populate=*&sort=createdAt:desc&pagination[pageSize]=5`,
-      options
-    );
+      `https://65f1c31b034bdbecc7639fc6.mockapi.io/api/blogs/Blogs?limit=5`    );
 
     if (!res.ok) {
       throw new Error(
@@ -37,29 +31,17 @@ export default async function Template({
     <section className=" pt-[100px] pb-[120px] blog">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
+         
+          {children}
           <div className="hidden lg:block w-full px-4 lg:w-4/12 h-screen overflow-y-scroll scrollbar-hidden sticky top-0 ">
             <div className=" mb-10 rounded-md bg-primary bg-opacity-5 dark:bg-opacity-10">
               <h3 className="border-b border-body-color border-opacity-10 py-4 px-8 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
                 Related Posts
               </h3>
               <ul className="p-8">
-                {filteredBlogs.data.map(
+                {filteredBlogs.map(
                   (
-                    i: {
-                      id: any;
-                      attributes: {
-                        title: string;
-                        thumbnail: {
-                          data: {
-                            attributes: {
-                              formats: { thumbnail: { url: any } };
-                            };
-                          };
-                        };
-                        createdAt: moment.MomentInput;
-                      };
-                    },
-                    j: Key | null | undefined
+                  i: { id: any; blog_title: string; thumbnail: string; createdAt: moment.MomentInput; },j: Key | null | undefined
                   ) => (
                     <li
                       key={j}
@@ -67,12 +49,12 @@ export default async function Template({
                     >
                       <RelatedPost
                         id={i.id}
-                        title={i.attributes.title}
-                        image={`${process.env.NEXT_PUBLIC_BACKEND_URL}${i.attributes.thumbnail.data.attributes.formats.thumbnail.url}`}
-                        slug={i.attributes.title
+                        title={i.blog_title}
+                        image={i.thumbnail}
+                        slug={i.blog_title
                           .toLowerCase()
                           .replace(/\s+/g, "-")}
-                        date={moment(i.attributes.createdAt).fromNow()}
+                        date={moment(i.createdAt).fromNow()}
                       />
                     </li>
                   )
@@ -80,8 +62,6 @@ export default async function Template({
               </ul>
             </div>
           </div>
-          {children}
-
           {/* <NewsLatterBox /> */}
         </div>
       </div>

@@ -100,3 +100,47 @@ backdrop-filter: blur(8.8px);
 .text-eele{
   text-shadow: 2px 1px RGB(53, 137, 245);
 }
+
+.editor-container {
+  margin-top: 10rem; /* Margin for the toolbar */
+  position: relative;
+  z-index: 1; /* Ensure that editor content is above toolbar */
+}
+.ql-toolbar {
+  position: sticky;
+  top: 10rem;
+  z-index: 1000; /* Adjust z-index as needed */
+  background-color: #d1d7fe; /* Optional: Set background color */
+}
+.ql-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.ql-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+pre{
+  background-color: rgb(42, 40, 40);
+  color: white;
+  padding: 1rem;
+  overflow-x: scroll;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+pre::-webkit-scrollbar {
+  width: 1px;
+  height: 5px;
+  }
+  
+  pre::-webkit-scrollbar-track {
+background-color: transparent;
+  }
+  
+  pre::-webkit-scrollbar-thumb {
+  background-color: rgb(126, 127, 129);
+  outline: 1px solid #494646;
+  border-radius: 1rem;
+  }

@@ -5,19 +5,12 @@ import { BsClockHistory } from "react-icons/bs";
 import moment from "moment";
 import Head from "next/head";
 import SharePost from "@/components/main/Blog/SharePost";
-import TagButton from "@/components/main/Blog/TagButton";
 
 async function getBlog(id: any) {
   try {
-    const options = {
-      headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_KEY}`,
-      },
-    };
 
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blogs/${id}?populate=*`,
-      options
+      `https://65f1c31b034bdbecc7639fc6.mockapi.io/api/blogs/Blogs/${id}`
     );
 
     if (!res.ok) {
@@ -38,14 +31,14 @@ const page = async ({ params }: { params: { slug: string } }) => {
   return (
     <>
       <Head>
-        <title>{blog.data.attributes.title}</title>
-        <meta name="description" content={blog.data.attributes.description} />
+        <title>{blog.blog_title}</title>
+        <meta name="description" content={blog.blog_description} />
         {/* Add other meta tags if needed */}
       </Head>
-      <div className="w-full px-4 lg:w-8/12">
+      <div className="w-full px-4 lg:w-8/12 overflow-hidden">
         <div>
           <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-primary sm:text-4xl sm:leading-tight break-words">
-            {blog.data.attributes.title}
+            {blog.blog_title}
           </h2>
           <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
             <div className="flex flex-wrap items-center">
@@ -55,7 +48,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
                     <Image
                       width={100}
                       height={100}
-                      src="https://miro.medium.com/v2/resize:fit:180/1*ArIyUwI0LQy3qjVjDHTKSw.png"
+                      src="https://avatars.githubusercontent.com/u/63432459?v=4"
                       alt="Mayur Jadhav"
                       loading="lazy"
                     />
@@ -72,7 +65,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
                   <span className="mr-3">
                     <BsClockHistory />
                   </span>
-                  {moment(blog.data.attributes.createdAt).fromNow()}
+                  {moment(blog.createdAt).fromNow()}
                 </p>
               </div>
             </div>
@@ -81,24 +74,24 @@ const page = async ({ params }: { params: { slug: string } }) => {
                 href="/"
                 className="inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold text-white"
               >
-                Programming
+                {blog.category}
               </Link>
             </div>
           </div>
           <div
-            dangerouslySetInnerHTML={{ __html: blog.data.attributes.blog }}
+            dangerouslySetInnerHTML={{ __html: blog.blog_content }}
           />
           <div className="items-center justify-between sm:flex">
             <div className="mb-5">
              
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 {blog.data.attributes.Tags &&
                   blog.data.attributes.Tags.split(",").map(
                     (Tag: string, index: React.Key | null | undefined) => (
                       <TagButton text={Tag.trim()} key={index} />
                     )
                   )}
-              </div>
+              </div> */}
             </div>
             <div className="mb-5">
               <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right dark:text-white">
