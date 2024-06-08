@@ -32,11 +32,11 @@ exports.$Enums = {}
 
 /**
  * Prisma Client JS version: 5.15.0
- * Query Engine version: 12e25d8d06f6ea5a0252864dd9a03b1bb51f3022
+ * Query Engine version: 4bc8b6e1b66cb932731fb1bdbbc550d1e010de81
  */
 Prisma.prismaVersion = {
   client: "5.15.0",
-  engine: "12e25d8d06f6ea5a0252864dd9a03b1bb51f3022"
+  engine: "4bc8b6e1b66cb932731fb1bdbbc550d1e010de81"
 }
 
 Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError;
@@ -135,12 +135,12 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
+    "rootEnvPath": null,
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../..",
   "clientVersion": "5.15.0",
-  "engineVersion": "12e25d8d06f6ea5a0252864dd9a03b1bb51f3022",
+  "engineVersion": "4bc8b6e1b66cb932731fb1bdbbc550d1e010de81",
   "datasourceNames": [
     "db"
   ],
@@ -154,8 +154,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"./generated/client\"\n}\n\ndatasource db {\n  provider     = \"mongodb\"\n  url          = env(\"DATABASE_URL\")\n  relationMode = \"prisma\"\n}\n\nmodel Blog {\n  id          String   @id @default(auto()) @map(\"_id\") @db.ObjectId\n  title       String\n  content     String\n  createdAt   DateTime @default(now())\n  updatedAt   DateTime @updatedAt\n  description String\n  thumbnail   String\n  views       Int      @default(400) // Change views field type to Int\n  isCompleted Boolean? @default(false)\n}\n",
-  "inlineSchemaHash": "87e934c16268954bcf98f1ad55855226b3911b81803ed63f0abd73544fcd1b28",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n    output   = \"./generated/client\"\n\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")  \n  relationMode = \"prisma\"\n\n\n}\n\n\nmodel Blog {\n  id String @id @default(auto()) @map(\"_id\") @db.ObjectId\n  title     String\n  content   String\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n  description String\n  thumbnail String\n  views       Int      @default(400)   // Change views field type to Int\n  isCompleted    Boolean? @default(false)\n}",
+  "inlineSchemaHash": "b6483dddea9e47ce0c02ea74b19764a5c5f138cb02029623eb08915e2b528384",
   "copyEngine": true
 }
 
