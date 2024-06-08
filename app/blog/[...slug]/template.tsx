@@ -3,11 +3,9 @@ import moment from "moment";
 import { Key } from "react";
 async function getData() {
   try {
-
-
-    const res = await fetch(
-      `https://65f1c31b034bdbecc7639fc6.mockapi.io/api/blogs/Blogs?limit=5`    );
-
+    const res = await fetch(`${process.env.SiteURL}/api/recentFive`, {
+      next: { revalidate: 3600 },
+    });
     if (!res.ok) {
       throw new Error(
         `Failed to fetch data: ${res.status} - ${res.statusText}`
@@ -31,7 +29,6 @@ export default async function Template({
     <section className=" pt-[100px] pb-[120px] blog">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
-         
           {children}
           <div className="hidden lg:block w-full px-4 lg:w-4/12 h-screen overflow-y-scroll scrollbar-hidden sticky top-0 ">
             <div className=" mb-10 rounded-md bg-primary bg-opacity-5 dark:bg-opacity-10">
@@ -41,7 +38,8 @@ export default async function Template({
               <ul className="p-8">
                 {filteredBlogs.map(
                   (
-                  i: { id: any; blog_title: string; thumbnail: string; createdAt: moment.MomentInput; },j: Key | null | undefined
+                    i: { id: any; title: string; thumbnail: string; createdAt: moment.MomentInput; },
+                    j: Key | null | undefined
                   ) => (
                     <li
                       key={j}
@@ -49,11 +47,9 @@ export default async function Template({
                     >
                       <RelatedPost
                         id={i.id}
-                        title={i.blog_title}
+                        title={i.title}
                         image={i.thumbnail}
-                        slug={i.blog_title
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}
+                        slug={i.title.toLowerCase().replace(/\s+/g, "-")}
                         date={moment(i.createdAt).fromNow()}
                       />
                     </li>

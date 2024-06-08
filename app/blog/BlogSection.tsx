@@ -3,146 +3,144 @@ import React, { useEffect, useState } from "react";
 import moment from "moment";
 import Link from "next/link";
 import { CiClock1 } from "react-icons/ci";
-import { debounce } from "lodash";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import Image from "next/image";
+import { FaEye } from "react-icons/fa";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
+import Skeleton from "@/components/main/Blog/Skeleton";
 
-async function fetchData() {
+export async function getServerSideProps() {
   try {
-    const res = await fetch(
-      `https://65f1c31b034bdbecc7639fc6.mockapi.io/api/blogs/Blogs?sortBy=createdAt`
-    );
-
-    if (!res.ok) {
-      throw new Error(
-        `Failed to fetch data: ${res.status} - ${res.statusText}`
-      );
-    }
-
-    return res.json();
+    const response = await fetch(`/api/getPost`, {
+      next: { revalidate: 3600 },
+    });
+    const data = response;
+    return {
+      props: {
+        data,
+      },
+    };
   } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
+    return {
+      props: {
+        data: [],
+        error: error.message,
+      },
+    };
   }
 }
 
 const BlogSection = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true); // State to track loading status
 
   useEffect(() => {
-    const fetchAndSetData = async () => {
+    const fetchData = async () => {
       try {
-        const result = await fetchData();
-        setData(result);
+        const response = await fetch(`/api/getPost`, {
+          next: { revalidate: 3600 },
+        });
+        
+        const data = await response.json();
+        setData(data);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        setError(error.message);
+      } finally {
+        setLoading(false); // Set loading to false when data fetching is complete
       }
     };
-
-    // Debounce the API call to avoid making too many requests in a short period
-    const debouncedFetchData = debounce(fetchAndSetData, 1000);
-
-    // Fetch data initially
-    debouncedFetchData();
-
-    return () => {
-      // Clear the debounce timeout when component unmounts
-      debouncedFetchData.cancel();
-    };
+    fetchData();
   }, []);
 
-  if (!data) {
-    return "Loading";
-  }
-
   return (
-    <section className="py-20">
-      
-      <div className="mx-auto grid md:gap-8  justify-center px-4 sm:grid-cols-1 sm:gap-4 sm:px-8 md:grid-cols-4">
- 
-        {data.map((post: { id: React.Key | null | undefined; }) => (
-          <Article key={post.id} post={post} />
-        ))}
+    <section className="w-5/6">
+      <h1 className="text-2xl text-center">Recent Blogs</h1>
+      <div className="flex flex-wrap justify-between">
+        {/* Show skeleton while loading */}
+        {loading && (
+          <>
+            <Skeleton />
+            <Skeleton />
+
+            <Skeleton />
+          </>
+        )}
+
+        {/* Show actual blog cards when data is loaded */}
+        {!loading &&
+          data.map((post) => <ThreeDCardDemo key={post.id} post={post} />)}
+
+        {/* Show error message if there's an error */}
+        {error && <p className="text-red-500">Error: {error}</p>}
       </div>
     </section>
   );
 };
-
-const Article = ({ post }) => {
-  const { thumbnail, blog_title, blog_description, id, createdAt, category } =
-    post;
-
+export function ThreeDCardDemo({ key, post }) {
+  const { id, title, views, createdAt, thumbnail, description } = post;
   return (
-    <article className="">
-      <Link
-        href={`blog/${blog_title.toLowerCase().replace(/\s+/g, "-")}/${id}`}
-      >
-        <>
-          <div className="relative  rounded-lg  border-black/50 border-2 flex justify-center items-center">
-            <div className="w-full shadow-lg transition duration-500 hover:shadow-3xl hover:shadow-blue-700">
-              <div className="flex gap-16  px-4 py-3 justify-between">
-                <div className="flex  items-center space-x-2">
-                  <img
-                    className="w-8 rounded-full "
-                    src="https://avatars.githubusercontent.com/u/63432459?v=4"
-                    alt="sara"
-                  />
-                  <h2 className="text-gray-800 font-semibold cursor-pointer">
-                    Mayur Jadhav
-                  </h2>
-                </div>
-                <div className="flex space-x-2">
-                  <div className="flex space-x-1 items-center">
-                    <span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-7 w-7 text-gray-600 cursor-pointer"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                        />
-                      </svg>
-                    </span>
-                    <span>22</span>
-                  </div>
-                </div>
-              </div>
-
-              <img
-                src={thumbnail}
-                className="w-full cursor-pointer border-y-[1px] border-x-0 border-dark"
-                alt=""
-              />
-              <div>
-                <div className="absolute p-2 bg-primary/90 rounded-r-md -mt-10 flex justify-center items-center gap-2">
-                  <CiClock1 className="w-3 h-3  text-white dark:text-black " />
-                  <span className="text-xs text-white dark:text-black font-semibold">
-                    {moment(createdAt).fromNow()}
-                  </span>
-                </div>
-                <div className="absolute right-0 p-2 bg-green-700/90 rounded-l-md -mt-10 flex justify-center items-center gap-2">
-                  <CiClock1 className="w-3 h-3  text-white dark:text-black " />
-                  <span className="text-xs text-white dark:text-black font-semibold">
-                    {category}
-                  </span>
-                </div>
-              </div>
-
-              <div className="my-5">
-                <h1 className="text-xl  px-4 font-semibold text-gray-800 cursor-pointer hover:text-gray-900 transition duration-100">
-                  {blog_title}
-                </h1>
-              </div>
+    <Link
+      href={`blog/${title.toLowerCase().replace(/\s+/g, "-")}/${id}`}
+      key={key}
+    >
+      <CardContainer className="inter-var">
+        <CardBody className="bg-gray-50/50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+          <CardItem
+            translateZ="50"
+            className="text-xl font-bold text-neutral-600 dark:text-white"
+          >
+            {title}
+          </CardItem>
+          <CardItem
+            as="p"
+            translateZ="60"
+            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+          >
+            {description}
+          </CardItem>
+          <CardItem translateZ="100" className="w-full mt-4">
+            <Image
+              src={thumbnail}
+              height="1000"
+              width="1000"
+              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl border"
+              alt="thumbnail"
+            />
+          </CardItem>
+          <div className="flex justify-between items-center mt-5">
+            <div className="flex  gap-5 items-center">
+              <CardItem
+                translateZ={20}
+                className="flex items-center gap-2  pl-4 py-2 rounded-xl text-md font-normal dark:text-white"
+              >
+                <FaEye className="w-3 h-3   dark:text-white " />
+                <span className="text-xs  dark:text-white font-semibold">
+                  {views}
+                </span>
+              </CardItem>
+              <CardItem
+                translateZ={20}
+                className="flex items-center gap-2  py-2 rounded-xl text-md font-normal dark:text-white"
+              >
+                <CiClock1 className="w-3 h-3   dark:text-white " />
+                <span className="text-xs  dark:text-white font-semibold">
+                  {moment(createdAt).fromNow()}
+                </span>
+              </CardItem>
             </div>
+            <CardItem
+              translateZ={20}
+              as="button"
+              className="flex  gap-2 px-4 py-2 rounded-xl  text-dark dark:text-gray-400 text-xs font-bold"
+            >
+              Read Now <ArrowRightIcon />
+            </CardItem>
           </div>
-        </>
-      </Link>
-    </article>
+        </CardBody>
+      </CardContainer>
+    </Link>
   );
-};
+}
 
 export default BlogSection;

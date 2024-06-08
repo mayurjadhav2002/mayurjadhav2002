@@ -3,7 +3,7 @@ import "@/styles/Hero.css";
 function Marque() {
   return (
     <>
-      <div className="marquee translate-y-0 lg:-rotate-2 -mt-1 rotate-3 overflow-hidden bg-gradient-to-r from-blue-600 to-red-500 hue-rotate-1 text-white font-bold">
+      <div className="marquee translate-y-0 lg:-rotate-2  rotate-3 overflow-hidden bg-gradient-to-r from-blue-600 to-red-500 hue-rotate-1 text-white font-bold">
         <span>
           悲しい時には 町のはずれで 電信柱の明り見てた 七つの僕には 不思議だった
           涙うかべて 見上げたら 虹のかけらが キラキラ光る 瞬きするたびに

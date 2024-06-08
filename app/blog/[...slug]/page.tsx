@@ -6,20 +6,19 @@ import moment from "moment";
 import Head from "next/head";
 import SharePost from "@/components/main/Blog/SharePost";
 
-async function getBlog(id: any) {
+async function getBlog(id: string) {
   try {
-
-    const res = await fetch(
-      `https://65f1c31b034bdbecc7639fc6.mockapi.io/api/blogs/Blogs/${id}`
-    );
-
+    const res = await fetch(`${process.env.SiteURL}/api/fetchPost?id=${id}`, {
+      next: { revalidate: 3600 },
+    });
     if (!res.ok) {
       throw new Error(
         `Failed to fetch data: ${res.status} - ${res.statusText}`
       );
     }
 
-    return res.json();
+    const data = await res.json();
+    return data;
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error;
@@ -31,14 +30,14 @@ const page = async ({ params }: { params: { slug: string } }) => {
   return (
     <>
       <Head>
-        <title>{blog.blog_title}</title>
-        <meta name="description" content={blog.blog_description} />
+        <title>{blog.title}</title>
+        <meta name="description" content={blog.description} />
         {/* Add other meta tags if needed */}
       </Head>
       <div className="w-full px-4 lg:w-8/12 overflow-hidden">
         <div>
           <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-primary sm:text-4xl sm:leading-tight break-words">
-            {blog.blog_title}
+            {blog.title}
           </h2>
           <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
             <div className="flex flex-wrap items-center">
@@ -65,7 +64,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
                   <span className="mr-3">
                     <BsClockHistory />
                   </span>
-                  {moment(blog.createdAt).fromNow()}
+                  Posted {moment(blog.createdAt).fromNow()}
                 </p>
               </div>
             </div>
@@ -74,16 +73,16 @@ const page = async ({ params }: { params: { slug: string } }) => {
                 href="/"
                 className="inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold text-white"
               >
-                {blog.category}
+                {blog.views} Views
               </Link>
             </div>
           </div>
-          <div
-            dangerouslySetInnerHTML={{ __html: blog.blog_content }}
-          />
+          <div className="content">
+
+          <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+          </div>
           <div className="items-center justify-between sm:flex">
             <div className="mb-5">
-             
               {/* <div className="flex items-center">
                 {blog.data.attributes.Tags &&
                   blog.data.attributes.Tags.split(",").map(
@@ -101,7 +100,9 @@ const page = async ({ params }: { params: { slug: string } }) => {
                 <SharePost />
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
     </>

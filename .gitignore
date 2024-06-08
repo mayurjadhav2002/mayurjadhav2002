@@ -33,6 +33,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+/app/admin/*
+/app/admin
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+app/admin/write/page.tsx

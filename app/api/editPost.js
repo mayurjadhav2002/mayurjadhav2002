@@ -1,7 +1,7 @@
-import clientPromise from "../../lib/connect";
+import clientPromise from "../../lib/db";
 import { ObjectId } from "mongodb";
 
-export default async (req, res) => {
+const editPost = async (req, res) => {
   try {
     const client = await clientPromise;
     const db = client.db("posts");
@@ -26,3 +26,5 @@ export default async (req, res) => {
     throw new Error(e).message;
   }
 };
+
+export default editPost;

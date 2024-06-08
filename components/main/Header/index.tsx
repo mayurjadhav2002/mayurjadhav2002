@@ -109,11 +109,13 @@ const Header = () => {
                       <Link
                         href="https://l.linklyhq.com/l/1xHte"
                         target="_blank"
-                        className={`flex  text-base  text-dark group-hover:opacity-70 dark:text-white`}
+                        className={`flex py-2  text-base  text-dark group-hover:opacity-70 dark:text-white`}
                       >
-                        <span className="px-3 py-2 rounded-lg font-semibold bg-blue-400/30 active:animate-ping">
                           Resume / CV
-                        </span>
+
+                        {/* <span className="px-3 py-2 rounded-lg font-semibold bg-blue-400/30 active:animate-ping">
+                          Resume / CV
+                        </span> */}
                       </Link>
                     </li>
                     <li className="group relative">
