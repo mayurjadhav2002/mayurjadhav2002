@@ -3,7 +3,7 @@ import moment from "moment";
 import { Key } from "react";
 async function getData() {
   try {
-    const res = await fetch(`${process.env.SiteURL}/api/recentFive`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/blogs/most_viewed_latest`, {
       next: { revalidate: 3600 },
     });
     if (!res.ok) {

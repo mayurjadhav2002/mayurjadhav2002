@@ -157,18 +157,60 @@ pre::-webkit-scrollbar-thumb {
 }
 .content p {
   font-size: 20px;
+  word-wrap: break-word;
+  margin: 20px 0 40px;
+}
+.content {
+  font-size: 20px;
+}
+.content blockquote {
+  font-size: 1.4em;
+  width: 100%;
+  margin: 10px auto;
+  font-family: Open Sans;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #008cff;
+
+  line-height: 1.6;
+  position: relative;
+  background: #eeeeee;
 }
 
+.content blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #008cff;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+.content blockquote::after {
+  content: "";
+}
+
+.content blockquote span {
+  display: block;
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
 .content img {
-  width: 80%;
-  border: 2px gray solid;
+  max-height: 550px;
+  width: auto!important;
+  height: auto!important;
   border-radius: 14px;
-  height: auto;
-  margin: 20px auto;
+  border: 0.5px solid #d1d7fe;
+  object-fit: contain !important;
+  margin-bottom: 25px;
 }
 .content img:hover {
   transform: scale(1.05);
-  transition: 1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
 }
 
 .content a {
@@ -214,3 +256,5 @@ pre::-webkit-scrollbar-thumb {
   border: 2px solid blueviolet;
   border-radius: 14px;
 }
+
+

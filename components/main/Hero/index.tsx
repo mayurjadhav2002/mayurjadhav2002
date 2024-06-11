@@ -36,7 +36,7 @@ function Hero() {
                 Enthusiast, and a solitary busy bee.
                 <br />
                 <Link
-                  href="https://l.linklyhq.com/l/1xHte"
+                  href="https://l.linklyhq.com/l/1y8Kq"
                   target="_blank"
                   className="flex justify-center my-5 text-sm text-blue-500 text-center"
                 >

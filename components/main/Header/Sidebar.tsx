@@ -5,11 +5,14 @@ import { AiOutlineHome } from "react-icons/ai";
 import ThemeToggler from "./ThemeToggler";
 import { SlDocs } from "react-icons/sl";
 import { FaCertificate } from "react-icons/fa";
-import { MdWorkHistory } from "react-icons/md";
+import { MdDarkMode, MdSunny, MdWorkHistory } from "react-icons/md";
 import { GrProjects } from "react-icons/gr";
 import { GiGraduateCap } from "react-icons/gi";
+import { useTheme } from "next-themes";
 
 function Sidebar() {
+  const { theme, setTheme } = useTheme();
+
   return (
     <div>
       <ul>
@@ -56,7 +59,7 @@ function Sidebar() {
         </li>
         <li className="group relative">
           <Link
-            href="https://l.linklyhq.com/l/1xHte"
+            href="https://l.linklyhq.com/l/1y8Kq"
             className="transition-all duration-500 flex cursor-pointer items-center rounded-lg px-4 py-2 dark:text-white hover:bg-gray-100
                         dark:hover:bg-black hover:text-gray-700"
           >
@@ -76,9 +79,24 @@ function Sidebar() {
           </Link>
         </li>
 
-        <li className="flex bg-gray-50 dark:bg-dark items-center px-2">
-          <ThemeToggler />
-          Theme Change
+        <li className="flex  bg-dark dark:bg-yellow bg-opacity-20 rounded-lg items-center"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          <div
+            className=" flex cursor-pointer items-center rounded-lg px-4 py-2 dark:text-white hover:bg-gray-100
+                        "
+                        >
+            {theme == "dark" ? (
+              <>
+                <MdSunny className="mr-3 text-yellow-400" />
+                Light Mode
+              </>
+            ) : (
+              <>
+                <MdDarkMode className="mr-3 text-dark" />
+                Dark Mode
+              </>
+            )}
+          </div>
         </li>
       </ul>
     </div>

@@ -11,7 +11,7 @@ import Skeleton from "@/components/main/Blog/Skeleton";
 
 export async function getServerSideProps() {
   try {
-    const response = await fetch(`/api/getPost`, {
+    const response = await fetch(`${process.env.BACKEND_URL}/blogs`, {
       next: { revalidate: 3600 },
     });
     const data = response;
@@ -38,10 +38,13 @@ const BlogSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/getPost`, {
-          next: { revalidate: 3600 },
-        });
-        
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/blogs`,
+          {
+            next: { revalidate: 3600 },
+          }
+        );
+
         const data = await response.json();
         setData(data);
       } catch (error) {
@@ -56,7 +59,7 @@ const BlogSection = () => {
   return (
     <section className="w-5/6">
       <h1 className="text-2xl text-center">Recent Blogs</h1>
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap justify-start margin-auto">
         {/* Show skeleton while loading */}
         {loading && (
           <>
@@ -78,24 +81,25 @@ const BlogSection = () => {
   );
 };
 export function ThreeDCardDemo({ key, post }) {
-  const { id, title, views, createdAt, thumbnail, description } = post;
+  const { _id, title, views, createdOn, thumbnail, description } = post;
   return (
     <Link
-      href={`blog/${title.toLowerCase().replace(/\s+/g, "-")}/${id}`}
+      href={`blog/${title.toLowerCase().replace(/\s+/g, "-")}/${_id}`}
       key={key}
+      className="mx-auto"
     >
       <CardContainer className="inter-var">
         <CardBody className="bg-gray-50/50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
           <CardItem
             translateZ="50"
-            className="text-xl font-bold text-neutral-600 dark:text-white"
+            className="text-xl line-clamp-2 font-bold text-neutral-600 dark:text-white"
           >
             {title}
           </CardItem>
           <CardItem
             as="p"
             translateZ="60"
-            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+            className="text-neutral-500 line-clamp-2 text-sm max-w-sm mt-2 dark:text-neutral-300"
           >
             {description}
           </CardItem>
@@ -125,7 +129,7 @@ export function ThreeDCardDemo({ key, post }) {
               >
                 <CiClock1 className="w-3 h-3   dark:text-white " />
                 <span className="text-xs  dark:text-white font-semibold">
-                  {moment(createdAt).fromNow()}
+                  {moment(createdOn).fromNow()}
                 </span>
               </CardItem>
             </div>

@@ -5,10 +5,11 @@ import { BsClockHistory } from "react-icons/bs";
 import moment from "moment";
 import Head from "next/head";
 import SharePost from "@/components/main/Blog/SharePost";
+import ProfileCard from "@/components/main/Blog/ProfileCard";
 
 async function getBlog(id: string) {
   try {
-    const res = await fetch(`${process.env.SiteURL}/api/fetchPost?id=${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/blogs/${id}`, {
       next: { revalidate: 3600 },
     });
     if (!res.ok) {
@@ -27,6 +28,7 @@ async function getBlog(id: string) {
 
 const page = async ({ params }: { params: { slug: string } }) => {
   const blog = await getBlog(params.slug[1]);
+
   return (
     <>
       <Head>
@@ -39,36 +41,18 @@ const page = async ({ params }: { params: { slug: string } }) => {
           <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-primary sm:text-4xl sm:leading-tight break-words">
             {blog.title}
           </h2>
-          <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
-            <div className="flex flex-wrap items-center">
-              <div className="mr-10 mb-5 flex items-center">
-                <div className="mr-1">
-                  <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                    <Image
-                      width={100}
-                      height={100}
-                      src="https://avatars.githubusercontent.com/u/63432459?v=4"
-                      alt="Mayur Jadhav"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <div className="w-full">
-                  <h4 className="text-md font-medium text-body-color dark:text-gray-200">
-                    By <span>Mayur Jadhav</span>
-                  </h4>
-                </div>
-              </div>
-              <div className="mb-5 flex items-center">
-                <p className="mr-5 flex items-center text-base font-medium text-body-color dark:text-gray-200">
-                  <span className="mr-3">
-                    <BsClockHistory />
-                  </span>
-                  Posted {moment(blog.createdAt).fromNow()}
-                </p>
-              </div>
+          <div className="overflow-hidden pb-7 flex  items-center justify-between border-b border-body-color border-opacity-10 dark:border-white dark:border-opacity-10">
+            <ProfileCard />
+            <div className="flex items-center">
+            <div className="hidden md:flex lg:flex xl:flex items-center">
+              <p className="mr-5 flex items-center text-base font-medium text-body-color dark:text-gray-200">
+                <span className="mr-3">
+                  <BsClockHistory />
+                </span>
+                Posted {moment(blog.createdOn).fromNow()}
+              </p>
             </div>
-            <div className="mb-5">
+            <div className="">
               <Link
                 href="/"
                 className="inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold text-white"
@@ -76,10 +60,11 @@ const page = async ({ params }: { params: { slug: string } }) => {
                 {blog.views} Views
               </Link>
             </div>
+            </div>
+         
           </div>
-          <div className="content">
-
-          <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+          <div className="content pt-7">
+            <div dangerouslySetInnerHTML={{ __html: blog.content }} />
           </div>
           <div className="items-center justify-between sm:flex">
             <div className="mb-5">
@@ -100,9 +85,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
                 <SharePost />
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </>
