@@ -1,0 +1,39 @@
+{
+  "name": "blog",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^41.4.2",
+    "@ckeditor/ckeditor5-image": "^41.4.2",
+    "@ckeditor/ckeditor5-react": "^7.0.0",
+    "@tinymce/tinymce-react": "^5.0.1",
+    "axios": "^1.7.2",
+    "ckeditor5-custom-build": "file:./src/ckeditor",
+    "flowbite": "^2.3.0",
+    "moment": "^2.30.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vercel": "^34.2.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "postcss": "^8.4.38",
+    "react-router-dom": "^6.23.1",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.2.0"
+  }
+}
