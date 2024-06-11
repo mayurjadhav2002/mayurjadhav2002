@@ -10,12 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^41.4.2",
-    "@ckeditor/ckeditor5-image": "^41.4.2",
-    "@ckeditor/ckeditor5-react": "^7.0.0",
+
     "@tinymce/tinymce-react": "^5.0.1",
     "axios": "^1.7.2",
-    "ckeditor5-custom-build": "file:./src/ckeditor",
     "flowbite": "^2.3.0",
     "moment": "^2.30.1",
     "react": "^18.2.0",
