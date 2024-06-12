@@ -33,8 +33,8 @@ function ProfileCard() {
           `}
           >
             <Image
-              width={100}
-              height={100}
+              width={80}
+              height={80}
               src="https://avatars.githubusercontent.com/u/63432459?v=4"
               alt="Mayur Jadhav"
               loading="lazy"
@@ -42,8 +42,8 @@ function ProfileCard() {
           </div>
         </div>
         <div className="w-full">
-          <h4 className="text-md font-medium text-body-color dark:text-gray-200">
-            By <span>Mayur Jadhav</span>
+          <h4 className="text-sm font-medium text-body-color dark:text-gray-200">
+         {!header && "By"} <span>Mayur Jadhav</span>
           </h4>
         </div>
       </div>

@@ -59,22 +59,20 @@ const BlogSection = () => {
   return (
     <section className="w-full lg:w-5/6">
       <h1 className="text-2xl text-center">Recent Blogs</h1>
-      <div className="flex flex-wrap justify-start margin-auto">
+      <div className="relative  flex flex-wrap justify-start margin-auto ">
         {/* Show skeleton while loading */}
-        {loading && (
-          <>
-            <Skeleton />
-            <Skeleton />
+        {loading ? (
+         [1, 2,3].map((n) => (
+            <Skeleton key={n} />
+          ))
+        ):
 
-            <Skeleton />
-          </>
-        )}
+        data.map((post) => <ThreeDCardDemo key={post.id} post={post} />)
+
+        }
 
         {/* Show actual blog cards when data is loaded */}
-        {!loading &&
-          data.map((post) => <ThreeDCardDemo key={post.id} post={post} />)}
-
-        {/* Show error message if there's an error */}
+      
         {error && <p className="text-red-500">Error: {error}</p>}
       </div>
     </section>

@@ -11,10 +11,9 @@ export default function About() {
               </h2>
               <div className="text-base md:text-lg break-normal">
                 <p>
-                  I&apos;m Mayur Jadhav, a final-year Computer Science student at
-                  Mumbai University. I&apos;ve got a solid two years of hands-on
+                  I&apos;m Mayur Jadhav, a learner of new tech Era. I&apos;ve got a solid two years of hands-on
                   experience in software development, playing around with cool
-                  stuff like Javascript, Python, MERN stack, C, and PHP. I&apos;ve
+                  stuff like Javascript, Python, C, and PHP. I&apos;ve
                   built desktop apps, mobile apps, websites, and even pitched in
                   on some open source projects.
                 </p>
@@ -34,22 +33,7 @@ export default function About() {
                   easier with tech.
                 </p>
 
-                <br></br>
-                <p>
-                  Internships at Zevo and Cozy Notion taught me how to crank out
-                  production-level code. Plus, I&apos;ve taken on leadership roles,
-                  like heading up the coding club and jumping into hackathons.
-                  It&apos;s been a ride, and it&apos;s sharpened my skills and my knack
-                  for problem-solving.
-                </p>
-
-                <br></br>
-                <p>
-                  Beyond the tech stuff, I&apos;m always looking to up my game.
-                  You&apos;ll find me in hackathons and coding competitions during my
-                  downtime. And just for kicks, I like to explore No-code
-                  Ethical Hacking. Learning is my jam, and I&apos;m all about finding ways.
-                </p>
+             
               </div>
             </div>
           </div>

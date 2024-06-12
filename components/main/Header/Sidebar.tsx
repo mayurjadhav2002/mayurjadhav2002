@@ -79,10 +79,10 @@ function Sidebar() {
           </Link>
         </li>
 
-        <li className="flex  bg-dark dark:bg-yellow bg-opacity-20 rounded-lg items-center"
+        <li className="flex  bg-dark dark:bg-yellow-900 bg-opacity-20 rounded-lg items-center"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
           <div
-            className=" flex cursor-pointer items-center rounded-lg px-4 py-2 dark:text-white hover:bg-gray-100
+            className=" flex cursor-pointer items-center rounded-lg px-4 py-2 dark:text-white 
                         "
                         >
             {theme == "dark" ? (

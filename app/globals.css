@@ -258,3 +258,84 @@ pre::-webkit-scrollbar-thumb {
 }
 
 
+@media only screen and (max-width: 600px) {
+
+
+.content h1 {
+  font-size: 38px;
+}
+.content h2 {
+  font-size: 32px;
+}
+.content h3 {
+  font-size: 28px;
+}
+.content h4 {
+  font-size: 24px;
+}
+.content p {
+  font-size: 17px;
+  word-wrap: break-word;
+  margin: 20px 0 40px;
+}
+.content {
+  font-size: 17px;
+  word-wrap: break-word;
+  margin: 20px 0 40px;
+}
+.content blockquote {
+  font-size: 1.4em;
+  width: 100%;
+  margin: 10px auto;
+  font-family: Open Sans;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #008cff;
+
+  line-height: 1.6;
+  position: relative;
+  background: #eeeeee;
+}
+
+.content blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #008cff;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+.content blockquote::after {
+  content: "";
+}
+
+.content blockquote span {
+  display: block;
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+.content img {
+  max-height: 550px;
+  width: auto!important;
+  height: auto!important;
+  border-radius: 14px;
+  border: 0.5px solid #d1d7fe;
+  object-fit: contain !important;
+  margin-bottom: 25px;
+}
+.content img:hover {
+  transform: scale(1.05);
+  transition: 0.1s all ease-in-out;
+}
+
+
+
+
+
+
+}

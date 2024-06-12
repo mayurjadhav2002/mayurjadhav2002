@@ -12,7 +12,7 @@ export default function Footer() {
             {" "}
             Crafted with 💖 by Mayur Jadhav
           </span>
-          <div className="flex mt-4 space-x-6 sm:justify-center justify-center lg:justify-end sm:mt-0">
+          <div className="flex mt-4 space-x-6 pb-5 md:pb-0 lg:pb-0 sm:justify-center justify-center lg:justify-end sm:mt-0">
             <Link
               href="https://www.linkedin.com/in/mayur-jadhav-1824251aa/"
               target="blank"
@@ -48,7 +48,7 @@ export default function Footer() {
               <span className="sr-only">Facebook page</span>
             </Link>
             <Link
-              href="https://www.instagram.com/mayurjadhav2002_/"
+              href="https://www.instagram.com/_mayur._._/"
               target="blank"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
