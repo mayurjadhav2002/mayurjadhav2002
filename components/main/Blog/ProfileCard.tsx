@@ -19,8 +19,8 @@ function ProfileCard() {
       className={` flex flex-wrap items-center    ${
         header
           ? `!fixed rounded-3xl !z-[999] !bg-primary !bg-opacity-30 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-50
-           -mt-56
-          sm:-mt-72 md:-mt-56 lg:-mt-72
+           top-0 mt-20
+          
           `
           : ""
       }`}

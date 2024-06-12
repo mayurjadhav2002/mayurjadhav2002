@@ -6,7 +6,7 @@ import BlogSection from "./BlogSection";
 function Page() {
   return (
     <div>
-      <div className="flex flex-col w-full justify-center items-center p-10 mt-20">
+      <div className="flex flex-col w-full justify-center items-center lg:p-10 md:p-10 p-5 mt-20">
        <BlogSection/>
       </div>
     </div>

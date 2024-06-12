@@ -38,7 +38,7 @@ export default async function Template({
               <ul className="p-8">
                 {filteredBlogs.map(
                   (
-                    i: { id: any; title: string; thumbnail: string; createdAt: moment.MomentInput; },
+                    i: { id: any; title: string; thumbnail: string; createdOn: moment.MomentInput; },
                     j: Key | null | undefined
                   ) => (
                     <li
@@ -50,7 +50,7 @@ export default async function Template({
                         title={i.title}
                         image={i.thumbnail}
                         slug={i.title.toLowerCase().replace(/\s+/g, "-")}
-                        date={moment(i.createdAt).fromNow()}
+                        date={moment(i.createdOn).fromNow()}
                       />
                     </li>
                   )

@@ -57,7 +57,7 @@ const BlogSection = () => {
   }, []);
 
   return (
-    <section className="w-5/6">
+    <section className="w-full lg:w-5/6">
       <h1 className="text-2xl text-center">Recent Blogs</h1>
       <div className="flex flex-wrap justify-start margin-auto">
         {/* Show skeleton while loading */}
@@ -86,13 +86,13 @@ export function ThreeDCardDemo({ key, post }) {
     <Link
       href={`blog/${title.toLowerCase().replace(/\s+/g, "-")}/${_id}`}
       key={key}
-      className="mx-auto"
+      className="mx-auto "
     >
       <CardContainer className="inter-var">
-        <CardBody className="bg-gray-50/50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+        <CardBody className="bg-gray-50/50 text-neutral-600  dark:text-white hover:!text-primary relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
           <CardItem
             translateZ="50"
-            className="text-xl line-clamp-2 font-bold text-neutral-600 dark:text-white"
+            className="text-xl line-clamp-2 font-bold  "
           >
             {title}
           </CardItem>
@@ -112,14 +112,14 @@ export function ThreeDCardDemo({ key, post }) {
               alt="thumbnail"
             />
           </CardItem>
-          <div className="flex justify-between items-center mt-5">
-            <div className="flex  gap-5 items-center">
+          <div className="block lg:flex justify-between items-center mt-5">
+            <div className="flex  gap-5 items-center justify-between lg:justify-start">
               <CardItem
                 translateZ={20}
-                className="flex items-center gap-2  pl-4 py-2 rounded-xl text-md font-normal dark:text-white"
+                className="flex items-center gap-2  lg:pl-4 py-2 rounded-xl text-md font-normal dark:text-white"
               >
-                <FaEye className="w-3 h-3   dark:text-white " />
-                <span className="text-xs  dark:text-white font-semibold">
+                <FaEye className="w-3 h-3  text-neutral-700 dark:text-white " />
+                <span className="text-xs text-neutral-700 dark:text-white font-semibold">
                   {views}
                 </span>
               </CardItem>
@@ -127,8 +127,8 @@ export function ThreeDCardDemo({ key, post }) {
                 translateZ={20}
                 className="flex items-center gap-2  py-2 rounded-xl text-md font-normal dark:text-white"
               >
-                <CiClock1 className="w-3 h-3   dark:text-white " />
-                <span className="text-xs  dark:text-white font-semibold">
+                <CiClock1 className="w-3 h-3 text-neutral-700  dark:text-white " />
+                <span className="text-xs text-neutral-700 dark:text-white font-semibold">
                   {moment(createdOn).fromNow()}
                 </span>
               </CardItem>
@@ -136,7 +136,7 @@ export function ThreeDCardDemo({ key, post }) {
             <CardItem
               translateZ={20}
               as="button"
-              className="flex  gap-2 px-4 py-2 rounded-xl  text-dark dark:text-gray-400 text-xs font-bold"
+              className="hidden lg:flex xl:flex  gap-2 px-4 py-2 rounded-xl  text-dark dark:text-gray-400 text-xs font-bold"
             >
               Read Now <ArrowRightIcon />
             </CardItem>
