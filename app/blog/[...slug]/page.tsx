@@ -7,7 +7,6 @@ import Head from "next/head";
 import SharePost from "@/components/main/Blog/SharePost";
 import ProfileCard from "@/components/main/Blog/ProfileCard";
 
-
 async function getBlog(id: string) {
   try {
     const res = await fetch(
