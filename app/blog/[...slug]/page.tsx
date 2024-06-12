@@ -7,6 +7,7 @@ import Head from "next/head";
 import SharePost from "@/components/main/Blog/SharePost";
 import ProfileCard from "@/components/main/Blog/ProfileCard";
 
+
 async function getBlog(id: string) {
   try {
     const res = await fetch(
@@ -30,6 +31,7 @@ async function getBlog(id: string) {
 }
 
 const page = async ({ params }: { params: { slug: string } }) => {
+  
   const blog = await getBlog(params.slug[1]);
 
   return (
@@ -70,21 +72,16 @@ const page = async ({ params }: { params: { slug: string } }) => {
           </div>
           <div className="items-center justify-between sm:flex">
             <div className="mb-5">
-              {/* <div className="flex items-center">
-                {blog.data.attributes.Tags &&
-                  blog.data.attributes.Tags.split(",").map(
-                    (Tag: string, index: React.Key | null | undefined) => (
-                      <TagButton text={Tag.trim()} key={index} />
-                    )
-                  )}
-              </div> */}
+          
             </div>
             <div className="mb-5">
               <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right dark:text-white">
                 Share this post :
               </h5>
               <div className="flex items-center sm:justify-end">
-                <SharePost />
+                <SharePost
+                currentUrl={'https://mayurjadhav.me/blog/'+params.slug[0]+"/"+params.slug[1]}
+                />
               </div>
             </div>
           </div>
