@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 const ImageClasses = "h-40 min-w-full object-cover rounded-t-lg";
 const Certificates = [
   {
@@ -10,7 +11,7 @@ const Certificates = [
     link: "https://www.coursera.org/account/accomplishments/verify/TBGSJYJZDN5A",
   },
   {
-    image: "assets/cognitive.png",
+    image: "/assets/cognitive.png",
     name: "Cognitive.ai | Python101",
     desc: "Python 101 for Data Science",
     link: "https://courses.cognitiveclass.ai/certificates/544423c5daad47848b58a7215501ba50",
@@ -22,13 +23,13 @@ const Certificates = [
     link: "https://www.kaggle.com/learn/certification/mayuronkaggle/data-cleaning",
   },
   {
-    image: "assets/responsive web design.png",
+    image: "/assets/responsive web design.png",
     name: "Cognitive.ai | Python101",
     desc: "Python 101 for Data Science",
     link: "https://courses.cognitiveclass.ai/certificates/544423c5daad47848b58a7215501ba50",
   },
   {
-    image: "assets/cognitiveclassmysql.png",
+    image: "/assets/cognitiveclassmysql.png",
     name: "CognitiveClass | MySQL",
     desc: "MySQL command Line",
     link: "https://courses.cognitiveclass.ai/certificates/0d539d2600714e39a991df0c4e6948a1",
@@ -41,13 +42,13 @@ const Certificates = [
     link: "https://www.udemy.com/certificate/UC-e16825b2-af4d-48ab-9ca7-a458c579b858/",
   },
   {
-    image: "assets/cognitiveclasssql.png",
+    image: "/assets/cognitiveclasssql.png",
     name: "CognitiveClass | SQL",
     desc: "SQL and Relational Databases",
     link: "https://courses.cognitiveclass.ai/certificates/70598f3b55584acca713fa0010df45ab",
   },
   {
-    image: "assets/hackerrankpython.png",
+    image: "/assets/hackerrankpython.png",
     name: "HackerRank | Python",
     desc: "Python Bootcamp",
     link: "https://www.hackerrank.com/certificates/0694edae1426",
@@ -70,7 +71,9 @@ export default function Certification() {
             className="max-w-sm  border border-gray-200 rounded-lg shadow bg-slate-50 dark:bg-black dark:border-gray-700"
           >
             <Link href={certificate.link}>
-              <img
+              <Image 
+                 width={200}
+                 height={200}
                 className={ImageClasses}
                 src={certificate.image}
                 alt={certificate.name}

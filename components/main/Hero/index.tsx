@@ -5,6 +5,7 @@ import Marque from "./Marque";
 import Typing from "./TypingEffect";
 import {} from "@/components/ui/badge";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import Image from "next/image";
 function Hero() {
   return (
     <section
@@ -127,8 +128,10 @@ function Hero() {
             </div>
           </div>
 
-          <img
-            src={"./assets/img.png"}
+          <Image
+            src={"/assets/img.png"}
+            width={500}
+            height={500}
             alt="Hii Image is Here but you can't see!"
             loading="lazy"
             className=" right-0 bottom-0"
