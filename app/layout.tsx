@@ -55,7 +55,7 @@ export default function RootLayout({
       {/* Additional */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
-      
+      <meta name="google-site-verification" content="2AKoUPAODxXpU30OmRU7Dq1aiwXDUoywc-2_TWIiBIg" />
       {/* Schema.org */}
       <script type="application/ld+json">
         {`
