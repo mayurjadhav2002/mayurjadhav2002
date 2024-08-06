@@ -32,11 +32,11 @@ function Hero() {
                 </span>
               </h1>
               <p className="text-gray-700 text-lg text-center md:text-lg dark:text-white">
-                Hi there, I&apos;m Human, a Software Engineer, AI
-                Enthusiast, and a solitary busy bee.
+                Hi there, I&apos;m Human, a Software Engineer, AI Enthusiast,
+                and a solitary busy bee.
                 <br />
                 <Link
-                  href="https://l.linklyhq.com/l/1y8Kq"
+                  href="https://3ly.link/1zD7C"
                   target="_blank"
                   className="flex justify-center my-5 text-sm text-blue-500 text-center"
                 >
@@ -45,7 +45,7 @@ function Hero() {
                     as="button"
                     className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
                   >
-                    Find my short-doc {"(Resume)"} 🔗
+                    Find my CV 🔗
                   </HoverBorderGradient>
                 </Link>
               </p>
@@ -123,7 +123,6 @@ function Hero() {
                     <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z" />
                   </svg>
                 </Link>
-                
               </div>
             </div>
           </div>

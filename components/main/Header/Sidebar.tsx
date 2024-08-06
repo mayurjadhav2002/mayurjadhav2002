@@ -59,7 +59,8 @@ function Sidebar() {
         </li>
         <li className="group relative">
           <Link
-            href="https://l.linklyhq.com/l/1y8Kq"
+            href="https://3ly.link/1zD7C"
+            target="_blank"
             className="transition-all duration-500 flex cursor-pointer items-center rounded-lg px-4 py-2 dark:text-white hover:bg-gray-100
                         dark:hover:bg-black hover:text-gray-700"
           >
@@ -79,12 +80,14 @@ function Sidebar() {
           </Link>
         </li>
 
-        <li className="flex  bg-dark dark:bg-yellow-900 bg-opacity-20 rounded-lg items-center"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+        <li
+          className="flex  bg-dark dark:bg-yellow-900 bg-opacity-20 rounded-lg items-center"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        >
           <div
             className=" flex cursor-pointer items-center rounded-lg px-4 py-2 dark:text-white 
                         "
-                        >
+          >
             {theme == "dark" ? (
               <>
                 <MdSunny className="mr-3 text-yellow-400" />

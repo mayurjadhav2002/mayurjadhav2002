@@ -108,7 +108,7 @@ const Header = () => {
                   <ul className="block lg:flex lg:space-x-12 pt-2">
                     <li className="group relative ">
                       <Link
-                        href="https://l.linklyhq.com/l/1y8Kq"
+                        href="https://3ly.link/1zD7C"
                         target="_blank"
                         className={`flex py-2  text-base  text-dark group-hover:opacity-70 dark:text-white`}
                       >

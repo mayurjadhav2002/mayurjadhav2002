@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mayurjadhav.tech
+
+# Sitemaps
+Sitemap: https://mayurjadhav.tech/sitemap.xml
