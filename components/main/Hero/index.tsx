@@ -37,7 +37,7 @@ function Hero() {
                 and a solitary busy bee.
                 <br />
                 <Link
-                  href="https://3ly.link/1zD7C"
+                  href={process.env.NEXT_PUBLIC_RESUME_URL}
                   target="_blank"
                   className="flex justify-center my-5 text-sm text-blue-500 text-center"
                 >

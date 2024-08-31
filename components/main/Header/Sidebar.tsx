@@ -59,7 +59,7 @@ function Sidebar() {
         </li>
         <li className="group relative">
           <Link
-            href="https://3ly.link/1zD7C"
+            href={process.env.NEXT_PUBLIC_RESUME_URL}
             target="_blank"
             className="transition-all duration-500 flex cursor-pointer items-center rounded-lg px-4 py-2 dark:text-white hover:bg-gray-100
                         dark:hover:bg-black hover:text-gray-700"

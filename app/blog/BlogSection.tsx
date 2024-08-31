@@ -62,7 +62,7 @@ const BlogSection = () => {
       <div className="relative  flex flex-wrap justify-start margin-auto ">
         {/* Show skeleton while loading */}
         {loading ? (
-         [1, 2,3].map((n) => (
+         [1, 2,3,4,5, 6].map((n) => (
             <Skeleton key={n} />
           ))
         ):
@@ -81,7 +81,7 @@ const BlogSection = () => {
 export function ThreeDCardDemo({ key, post }) {
   const { _id, title, views, createdOn, thumbnail, description } = post;
   return (
-    <Link
+    <a
       href={`blog/${title.toLowerCase().replace(/\s+/g, "-")}/${_id}`}
       key={key}
       className="mx-auto "
@@ -141,7 +141,7 @@ export function ThreeDCardDemo({ key, post }) {
           </div>
         </CardBody>
       </CardContainer>
-    </Link>
+    </a>
   );
 }
 

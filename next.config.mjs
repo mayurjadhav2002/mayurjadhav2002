@@ -71,6 +71,10 @@ const nextConfig = {
         hostname: 'www.hackerrank.com',
         pathname: '/certificates/**',
       },
+      {
+        protocol: 'https',
+        hostname: "blogger.googleusercontent.com"
+      }
     ],
   },
 };

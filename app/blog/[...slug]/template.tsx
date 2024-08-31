@@ -1,11 +1,16 @@
+"use client";
+import BlogSkelton from "@/components/main/Blog/BlogSkelton";
 import RelatedPost from "@/components/main/Blog/RelatedPost";
 import moment from "moment";
-import { Key } from "react";
+import { Key, useEffect, useState } from "react";
 async function getData() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/blogs/most_viewed_latest`, {
-      next: { revalidate: 3600 },
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/blogs/most_viewed_latest`,
+      {
+        next: { revalidate: 3600 },
+      }
+    );
     if (!res.ok) {
       throw new Error(
         `Failed to fetch data: ${res.status} - ${res.statusText}`
@@ -18,12 +23,29 @@ async function getData() {
     throw error; // rethrow the error to be handled by the caller
   }
 }
-export default async function Template({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const filteredBlogs = await getData();
+export default function Template({ children }: { children: React.ReactNode }) {
+  const [filteredBlogs, setFilteredBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+
+    if (!isMobile) {
+      const fetchData = async () => {
+        try {
+          const data = await getData();
+          setFilteredBlogs(data);
+        } catch (error) {
+
+        } finally {
+          setLoading(false); // Set loading to false after data is fetched
+        }
+      };
+
+      fetchData();
+    }
+  }, [isMobile]);
 
   return (
     <section className=" pt-[100px] pb-[120px] blog">
@@ -36,23 +58,32 @@ export default async function Template({
                 Related Posts
               </h3>
               <ul className="p-8">
-                {filteredBlogs.map(
-                  (
-                    i: { id: any; title: string; thumbnail: string; createdOn: moment.MomentInput; },
-                    j: Key | null | undefined
-                  ) => (
-                    <li
-                      key={j}
-                      className="mb-6 border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10"
-                    >
-                      <RelatedPost
-                        id={i.id}
-                        title={i.title}
-                        image={i.thumbnail}
-                        slug={i.title.toLowerCase().replace(/\s+/g, "-")}
-                        date={moment(i.createdOn).fromNow()}
-                      />
-                    </li>
+                {loading ? (
+                <BlogSkelton/>
+                ) : (
+                  filteredBlogs.map(
+                    (
+                      i: {
+                        id: any;
+                        title: string;
+                        thumbnail: string;
+                        createdOn: moment.MomentInput;
+                      },
+                      j: Key | null | undefined
+                    ) => (
+                      <li
+                        key={j}
+                        className="mb-6 border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10"
+                      >
+                        <RelatedPost
+                          id={i.id}
+                          title={i.title}
+                          image={i.thumbnail}
+                          slug={i.title.toLowerCase().replace(/\s+/g, "-")}
+                          date={moment(i.createdOn).fromNow()}
+                        />
+                      </li>
+                    )
                   )
                 )}
               </ul>
