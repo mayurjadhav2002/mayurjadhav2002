@@ -63,7 +63,7 @@ export default function Work() {
                 className={`w-full  md:h-auto h-40   object-${work.fillType} bg-blue-200 lg:object-fit md:w-48 dark:bg-gray-800 rounded-t-lg md:rounded-none md:rounded-l-lg`}
                 src={work.imageSrc}
                 loading="lazy"
-                alt=""
+                alt={work.company + "Working as a " + work.role}
               />
               <div className="p-6 flex flex-col justify-start">
                 <h5 className="text-gray-900 text-xl font-medium dark:text-primary">

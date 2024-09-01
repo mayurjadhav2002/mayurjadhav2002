@@ -132,7 +132,7 @@ function Hero() {
             src={"/assets/img.png"}
             width={500}
             height={500}
-            alt="Hii Image is Here but you can't see!"
+            alt="Hii Image is Here but you can't see! I am AI enthusiast (just for seo)"
             loading="lazy"
             className=" right-0 bottom-0"
           />

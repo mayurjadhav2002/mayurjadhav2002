@@ -1,6 +1,6 @@
-function Skeleton() {
+function Skeleton({id=1}) {
   return (
-    <div className="relative w-full md:w-auto lg:w-auto  mx-auto min-h-[110px] py-5 flex items-center">
+    <div key={id} className="relative w-full md:w-auto lg:w-auto  mx-auto min-h-[110px] py-5 flex items-center">
       <div className="skeleton-container bg-gray-50/50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] 
       w-full sm:w-[30rem] h-auto rounded-xl p-6 border">
         <div className="skeleton-element w-full p-4 rounded-lg bg-gray-200 dark:bg-gray-600 animate-pulse"></div>

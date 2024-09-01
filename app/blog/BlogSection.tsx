@@ -9,26 +9,26 @@ import { FaEye } from "react-icons/fa";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Skeleton from "@/components/main/Blog/Skeleton";
 
-export async function getServerSideProps() {
-  try {
-    const response = await fetch(`${process.env.BACKEND_URL}/blogs`, {
-      next: { revalidate: 3600 },
-    });
-    const data = response;
-    return {
-      props: {
-        data,
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        data: [],
-        error: error.message,
-      },
-    };
-  }
-}
+// export async function getServerSideProps() {
+//   try {
+//     const response = await fetch(`${process.env.BACKEND_URL}/blogs`, {
+//       next: { revalidate: 3600 },
+//     });
+//     const data = response;
+//     return {
+//       props: {
+//         data,
+//       },
+//     };
+//   } catch (error) {
+//     return {
+//       props: {
+//         data: [],
+//         error: error.message,
+//       },
+//     };
+//   }
+// }
 
 const BlogSection = () => {
   const [data, setData] = useState([]);
@@ -63,7 +63,7 @@ const BlogSection = () => {
         {/* Show skeleton while loading */}
         {loading ? (
          [1, 2,3,4,5, 6].map((n) => (
-            <Skeleton key={n} />
+            <Skeleton id={n} key={n} />
           ))
         ):
 

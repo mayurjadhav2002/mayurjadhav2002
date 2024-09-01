@@ -9,7 +9,8 @@ import Header from "@/components/main/Header";
 import Footer from "@/components/main/Footer/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Head from "next/head";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Mayur Jadhav", url: "https://mayurjadhav.tech" }],
   keywords:
     "Software Development, Machine Learning, AI, Computer Science, Software Developer",
-    metadataBase: new URL('https://mayurjadhav.tech'),
+  metadataBase: new URL("https://mayurjadhav.tech"),
 
   openGraph: {
     title: "Mayur Jadhav | Portfolio Website",
@@ -39,14 +40,13 @@ export const metadata: Metadata = {
     title: "Mayur Jadhav | Portfolio Website",
     description:
       "My name is Mayur, and I am a Software Developer & AI enthusiast. I love improving systems and creating new things, currently working on AI projects for advancing Emotional AI and AGI. Find information related to my work on this site.",
-      images: "/assets/wesite_image.png",
-    },
+    images: "/assets/wesite_image.png",
+  },
   other: {
     "google-site-verification": "2AKoUPAODxXpU30OmRU7Dq1aiwXDUoywc-2_TWIiBIg",
 
-    "canonical": "https://mayurjadhav.tech",
-    "robots": "index, follow",
-
+    canonical: "https://mayurjadhav.tech",
+    robots: "index, follow",
   },
 };
 export default function RootLayout({
@@ -77,6 +77,16 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
         <GoogleAnalytics gaId="G-8BSK0VJNRH" />
+        <Script id="microsoft-clarity-analytics">
+          {`
+       (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "nw9di3cki8");
+  `}
+        </Script>
+        <SpeedInsights />
       </body>
     </html>
   );

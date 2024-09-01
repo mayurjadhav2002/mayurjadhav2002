@@ -1,14 +1,11 @@
-"use client";
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BsClockHistory } from "react-icons/bs";
 import moment from "moment";
-import Head from "next/head";
 import SharePost from "@/components/main/Blog/SharePost";
 import ProfileCard from "@/components/main/Blog/ProfileCard";
-import BlogLoading from "@/components/main/Blog/BlogLoading";
 
+// Function to fetch blog data
 async function getBlog(id: string) {
   try {
     const res = await fetch(
@@ -31,43 +28,45 @@ async function getBlog(id: string) {
   }
 }
 
-const BlogPage = ({ params }: { params: { slug: string[] } }) => {
-  const [blog, setBlog] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+// Function to generate metadata dynamically based on the blog data
+export async function generateMetadata({ params }: { params: { slug: string[] } }) {
+  const blog = await getBlog(params.slug[1]);
 
-  useEffect(() => {
-    const fetchBlog = async () => {
-      try {
-        const data = await getBlog(params.slug[1]);
-        setBlog(data);
-      } catch (error) {
-        setError("Error fetching blog data.");
-      } finally {
-        setLoading(false);
-      }
-    };
+  return {
+    title: blog.title || "Blog Title",
+    description: blog.description || "Blog Description",
+    keywords: blog.description || "Blog Keywords",
 
-    fetchBlog();
-  }, [params.slug]);
+    openGraph: {
+      title: blog.title,
+      description: blog.description,
+      url: `https://mayurjadhav.tech/blog/${blog.title.toLowerCase().replace(/\s+/g, "-")}/${params.slug[1]}`,
+      images: [blog.thumbnail],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.description,
+      images: blog.thumbnail,
+    },
+  };
+}
 
-  if (loading) return <BlogLoading />;
-  if (error)
-    return <div className="w-full px-4 lg:w-8/12 overflow-hidden">{error}</div>;
-  if (!blog)
+// Server component for the blog page
+const BlogPage = async ({ params }: { params: { slug: string[] } }) => {
+  const blog = await getBlog(params.slug[1]);
+
+  if (!blog) {
     return (
       <div className="w-full px-4 lg:w-8/12 overflow-hidden">
         No blog data found.
       </div>
     );
+  }
 
   return (
     <>
-      <Head>
-        <title>{blog.title}</title>
-        <meta name="description" content={blog.description} />
-        {/* Add other meta tags if needed */}
-      </Head>
       <div className="w-full px-4 lg:w-8/12 overflow-hidden">
         <div>
           <h2 className="mb-5 text-2xl lg:text-3xl font-bold leading-tight text-black dark:text-primary sm:text-4xl sm:leading-tight break-words">

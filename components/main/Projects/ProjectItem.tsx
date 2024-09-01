@@ -17,9 +17,9 @@ export const ProjectItem: React.FC<{ project: Project }> = ({ project }) => (
             code
           </div>
         </span>
-        <h1 className="inline-block mb-3 text-2xl font-bold leading-7 text-black dark:text-primary transition-colors duration-200 hover:text-deep-purple-accent-400">
+        <h2 className="inline-block mb-3 text-2xl font-bold leading-7 text-black dark:text-primary transition-colors duration-200 hover:text-deep-purple-accent-400">
           {project.title}
-        </h1>
+        </h2>
         <p className="mb-5 text-gray-700 line-clamp-5 dark:text-gray-300">{project.description}</p>
       </Link>
     </div>
