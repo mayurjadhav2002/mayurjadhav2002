@@ -1,10 +1,11 @@
-import { title } from "process";
 import BlogSection from "./BlogSection";
-import Head from "next/head";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blogs | Mayur Jadhav",
   description: "Read the latest blogs I wrote on Software Development, Machine Learning, AI, Philosophy, and more.",
+  alternates: {
+    canonical: "https://mayurjadhav.tech/blog",
+  },
   openGraph: {
     title: "Existential Lie - Understanding the Truth | Mayur Jadhav", 
     description:
@@ -24,10 +25,6 @@ export const metadata: Metadata = {
   function Page() {
   return (
     <>
-   
-    <Head>
-      <title>Blog</title>
-    </Head>
     <div>
       <div className="flex flex-col w-full justify-center items-center lg:p-10 md:p-10 p-5 mt-20">
        <BlogSection/>

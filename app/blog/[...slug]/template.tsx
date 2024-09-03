@@ -64,7 +64,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
                   filteredBlogs.map(
                     (
                       i: {
-                        id: any;
+                        _id: any;
                         title: string;
                         thumbnail: string;
                         createdOn: moment.MomentInput;
@@ -76,7 +76,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
                         className="mb-6 border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10"
                       >
                         <RelatedPost
-                          id={i.id}
+                          id={i._id}
                           title={i.title}
                           image={i.thumbnail}
                           slug={i.title.toLowerCase().replace(/\s+/g, "-")}

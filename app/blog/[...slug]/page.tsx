@@ -31,16 +31,19 @@ async function getBlog(id: string) {
 // Function to generate metadata dynamically based on the blog data
 export async function generateMetadata({ params }: { params: { slug: string[] } }) {
   const blog = await getBlog(params.slug[1]);
+  const canonicalUrl = `https://mayurjadhav.tech/blog/${blog.title.toLowerCase().replace(/\s+/g, "-")}/${params.slug[1]}`;
 
   return {
     title: blog.title || "Blog Title",
     description: blog.description || "Blog Description",
     keywords: blog.description || "Blog Keywords",
-
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: blog.title,
       description: blog.description,
-      url: `https://mayurjadhav.tech/blog/${blog.title.toLowerCase().replace(/\s+/g, "-")}/${params.slug[1]}`,
+      url: canonicalUrl,
       images: [blog.thumbnail],
       type: "website",
     },
@@ -50,7 +53,9 @@ export async function generateMetadata({ params }: { params: { slug: string[] } 
       description: blog.description,
       images: blog.thumbnail,
     },
+    
   };
+  
 }
 
 // Server component for the blog page

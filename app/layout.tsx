@@ -26,7 +26,9 @@ export const metadata: Metadata = {
   keywords:
     "Software Development, Machine Learning, AI, Computer Science, Software Developer",
   metadataBase: new URL("https://mayurjadhav.tech"),
-
+  alternates: {
+    canonical: "https://mayurjadhav.tech",
+  },
   openGraph: {
     title: "Mayur Jadhav | Portfolio Website",
     description:
