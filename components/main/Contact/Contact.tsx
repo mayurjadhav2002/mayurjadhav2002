@@ -8,9 +8,9 @@ function Contact() {
   const form = useRef<HTMLFormElement>(null);
 
   function sendEmail(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); 
 
-    if (!form.current) return; // Return early if form ref is not set
+    if (!form.current) return; 
 
     emailjs
       .sendForm(
@@ -30,14 +30,15 @@ function Contact() {
 
   return (
     <div className="px-3" id="contact">
-      <section className="relative z-10 overflow-hidden bg-transparent lg:py-[120px]">
+      <section className="relative z-10 overflow-hidden bg-transparent lg:pt-[120px]">
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
               <div className="mb-12 max-w-[570px] lg:mb-0">
                 <h2
-                  className="animate__fadeInUp animate__animated 
-          font-sans text-3xl font-bold lg:text-start text-center text-violet-800 sm:text-4xl sm:leading-none z-10"
+                  className="text-balance text-5xl mt-10 lg:mt-0 font-semibold leading-none tracking-tighter
+                  text-primary  dark:text-white 
+                  sm:text-6xl md:text-7xl lg:text-8xl"
                 >
                   Contact
                 </h2>

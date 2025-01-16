@@ -1,10 +1,8 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import { Fragment, SetStateAction, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
-import { Menu, Transition } from "@headlessui/react";
-import { HiChevronDown } from "react-icons/hi";
+
 import Sidebar from "./Sidebar";
 import "@/styles/header.min.css";
 
@@ -31,14 +29,7 @@ const Header = () => {
   });
 
   // submenu handler
-  const [openIndex, setOpenIndex] = useState(-1);
-  const handleSubmenu = (index: SetStateAction<number>) => {
-    if (openIndex === index) {
-      setOpenIndex(-1);
-    } else {
-      setOpenIndex(index);
-    }
-  };
+ 
 
   return (
     <>
@@ -46,7 +37,7 @@ const Header = () => {
         className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent 
         ${
           sticky
-            ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
+            ? "!fixed !z-[9999] py-2 !bg-blue-100 !bg-opacity-50 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
             : "absolute"
         }`}
       >
@@ -112,11 +103,9 @@ const Header = () => {
                         target="_blank"
                         className={`flex py-2  text-base  text-dark group-hover:opacity-70 dark:text-white`}
                       >
-                          Resume / CV
+                          CV
 
-                        {/* <span className="px-3 py-2 rounded-lg font-semibold bg-blue-400/30 active:animate-ping">
-                          Resume / CV
-                        </span> */}
+                     
                       </Link>
                     </li>
                     <li className="group relative">

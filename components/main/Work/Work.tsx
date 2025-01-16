@@ -1,3 +1,5 @@
+"use client"
+import { AuroraText } from "@/components/ui/aurora-text";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import React from "react";
 interface WorkExperience {
@@ -46,21 +48,22 @@ export default function Work() {
   return (
     <div className="pt-8 p-5 z-10 " id="experience">
       <div className="">
-        <h2 className="animate__fadeInUp animate__animated font-sans text-5xl lg:text-6xl font-bold text-center text-gray-300 sm:text-3xl sm:leading-none">
-          Work
-        </h2>
-        <h2 className="animate__fadeInUp animate__animated font-sans text-3xl lg:text-6xl font-bold text-center text-primary sm:text-3xl sm:leading-none">
-          Experience
-        </h2>
+      <h1 className="text-5xl my-10 text-center font-bold tracking-tighter  lg:text-7xl">
+      Work <AuroraText>Experience</AuroraText>
+    </h1>
 
         <div className="grid justify-center mt-5 mb-5">
           {workData.map((work, index) => (
             <div
               key={index}
-              className="flex flex-col my-3 h-auto lg:h-40 md:flex-row md:max-w-xl rounded-lg bg-white dark:bg-dark/50 shadow-lg hover:scale-105 hover:duration-500 cursor-pointer"
+              className="flex flex-col my-3 h-auto lg:h-40 md:flex-row md:max-w-xl rounded-lg bg-white 
+              dark:bg-dark shadow-lg hover:scale-105 hover:duration-200 cursor-pointer"
             >
               <img
-                className={`w-full  md:h-auto h-40   object-${work.fillType} bg-blue-200 lg:object-fit md:w-48 dark:bg-gray-800 rounded-t-lg md:rounded-none md:rounded-l-lg`}
+                className={`w-full 
+                  dark:bg-white
+                  md:h-auto h-40   object-${work.fillType} bg-blue-200 lg:object-fit md:w-48 
+                   rounded-t-lg md:rounded-none md:rounded-l-lg`}
                 src={work.imageSrc}
                 loading="lazy"
                 alt={work.company + "Working as a " + work.role}

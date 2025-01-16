@@ -8,6 +8,7 @@ import Image from "next/image";
 import { FaEye } from "react-icons/fa";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Skeleton from "@/components/main/Blog/Skeleton";
+import SparklesText from "@/components/ui/sparkles-text";
 
 // export async function getServerSideProps() {
 //   try {
@@ -58,7 +59,7 @@ const BlogSection = () => {
 
   return (
     <section className="w-full lg:w-5/6">
-      <h1 className="text-2xl text-center">Recent Blogs</h1>
+      <SparklesText className="pointer-events-none z-10 whitespace-pre-wrap text-center text-5xl mb-10 font-semibold leading-none" text="Recent Blogs"></SparklesText>
       <div className="relative  flex flex-wrap justify-start margin-auto ">
         {/* Show skeleton while loading */}
         {loading

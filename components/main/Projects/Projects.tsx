@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { ProjectItem } from "./ProjectItem";
+import FlipText from "@/components/ui/flip-text";
 
 interface Project {
   href: string;
@@ -11,11 +12,25 @@ interface Project {
 // Array of project data
 const projects: Project[] = [
   {
-    href: "https://github.com/mayurjadhav2002/Poet",
-    date: "August 2024",
-    title: "Poet",
+    href: "https://github.com/mayurjadhav2002/form-tracker",
+    date: "Jan 2025",
+    title: "Lead Revival",
     description:
-      "Social Media space where users can post their own poetry, stories, and literary pieces, and interact with a community of like-minded individuals who appreciate the art of writing.",
+      "Helps businesses capture and convert abandoned or partially completed form submissions by providing analytics, automation, and re-engagement tools.",
+  },
+  {
+    href: "https://github.com/mayurjadhav2002/kaithia-bot",
+    date: "Oct 2024",
+    title: "Kaithia",
+    description:
+      "Helps businesses capture and convert abandoned or partially completed form submissions by providing analytics, automation, and re-engagement tools.",
+  },
+  {
+    href: "https://github.com/mayurjadhav2002/form-tracker",
+    date: "Apr 2024",
+    title: "AI tutor",
+    description:
+      "WebApp for E-learning solution in Computer Science. AI tutor uses advanced AI Model to create customized roadmap, curated Topic Explainer and short notes for learning your topic.",
   },
   {
     href: "https://github.com/mayurjadhav2002/Progress",
@@ -29,7 +44,7 @@ const projects: Project[] = [
     date: "Dec 2023",
     title: "Like-button-Celebration",
     description:
-      "Like-button-celebration designed to add animated buttons for liking, unliking, upvoting, and custom interactions to your blogs, articles, and web content.",
+      "Like-button-celebration designed to add animated buttons for liking, unliking, upvoting, and custom interactions to your content.",
   },
   {
     href: "https://github.com/mayurjadhav2002/qbytespace",
@@ -63,7 +78,7 @@ const projects: Project[] = [
   {
     href: "https://github.com/mayurjadhav2002/Emotion-detection-NLP",
     date: "Nov 2022",
-    title: "TTE (Text To Emotion) Emotion Detection",
+    title: "Text To Emotion",
     description: "Emotion Detection Machine Learning Project to identify the emotions of individuals based on their tweets, text messages, or other written communications."
   },
   {
@@ -72,12 +87,7 @@ const projects: Project[] = [
     title: "Brain Tumor Detection",
     description: "Build a machine-learning model for detecting and classifying brain tumors in medical images. My goal was to accurately identify the presence of a brain tumor in an image using the most effective approach."
   },
-  {
-    href: "https://github.com/mayurjadhav2002/Potato-Disease-Classification-app",
-    date: "Oct 2022",
-    title: "Potato Disease Recognizer",
-    description: "Build an image classification model to detect and classify distinct visual symptoms or diseases in potato plants using a convolutional neural network (CNN)."
-  },
+
   // {
   //   href: "https://github.com/mayurjadhav2002/flask_url_shortner",
   //   date: "Feb 2020",
@@ -113,10 +123,11 @@ export default function Projects() {
   const [showAllProjects, setShowAllProjects] = useState(false);
 
   return (
-    <div className="mt-2 main-div backdrop:shadow-1 shadow-sm-light py-10 " id="project">
-      <h2 className="animate__fadeInUp animate__animated font-sans text-3xl font-bold text-center text-gray-900 dark:text-primary sm:text-4xl sm:leading-none z-10">
-        📔 Projects
-      </h2>
+    <div className="mt-2 main-div backdrop:shadow-1 shadow-sm-light py-10  " id="project">
+      <FlipText
+      className="text-4xl font-bold -tracking-widest text-black dark:text-white md:text-7xl md:leading-[5rem]"
+      word="Projects"
+    />
       <div className="p-5 mx-auto md:max-w-full lg:py-20">
         <div className="grid gap-2 lg:grid-cols-5 md:grid-cols-2 lg:max-w-full">
           {/* Render only 5 projects initially */}
@@ -129,7 +140,8 @@ export default function Projects() {
           <div className="text-center justify-end w-full p-3">
             <button
               onClick={() => setShowAllProjects(true)}
-              className="animate__fadeInUp animate__animated font-sans btn btn-outline btn-primary font-bold text-center text-gray-900  dark:text-white dark:border-blue-50 dark:border-2 dark:p-5 dark:rounded-lg"
+              className="animate__fadeInUp animate__animated font-sans btn btn-outline btn-primary font-bold text-center
+               text-gray-900  dark:text-white dark:border-blue-500 dark:border-2 p-5 dark:rounded-lg"
             >
               View More
             </button>
