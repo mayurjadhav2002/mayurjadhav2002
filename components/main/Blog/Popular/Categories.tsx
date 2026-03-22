@@ -32,13 +32,13 @@ function Categories() {
                 Popular Category
             </h3>
             <ul className="py-6 px-8">
-                {Categories.map((i: { url: string | UrlObject; category: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined }, j: React.Key | null | undefined)=>
-                <li key={j}>
-                    <Link href={i.url} className="mb-3 inline-block text-base font-medium text-body-color  hover:text-primary  dark:text-gray-300 dark:hover:text-primary"
-                    >
-                        {i.category}
-                    </Link>
-                </li>
+                {Categories.map((i: any, j: any) =>
+                    <li key={j}>
+                        <Link href={i.url} className="mb-3 inline-block text-base font-medium text-body-color  hover:text-primary  dark:text-gray-300 dark:hover:text-primary"
+                        >
+                            {i.category}
+                        </Link>
+                    </li>
                 )}
 
             </ul>
