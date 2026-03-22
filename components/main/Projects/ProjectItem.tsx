@@ -1,5 +1,5 @@
-import {EvervaultCard} from "@/components/ui/evervault-card";
-import {CodeIcon} from "@radix-ui/react-icons";
+import { EvervaultCard } from "@/components/ui/evervault-card";
+import { CodeIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 interface Project {
@@ -8,9 +8,9 @@ interface Project {
 	title: string;
 	description: string;
 }
-export const ProjectItem: React.FC<{project: Project}> = ({project}) => (
+export const ProjectItem: React.FC<{ project: Project }> = ({ project }) => (
 	<EvervaultCard>
-		<div className='p-8 mx-auto   dark:text-white'>
+		<div className='mx-auto h-full dark:text-white dark:bg-dark dark:bg-opacity-40 p-5 rounded-none'>
 			<Link href={project.href} target='_blank'>
 				<span className='mb-3 flex justify-between text-xs font-semibold tracking-wide uppercase'>
 					<span className='text-gray-600 dark:text-gray-200'>— {project.date}</span>

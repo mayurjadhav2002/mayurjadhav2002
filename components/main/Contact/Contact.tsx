@@ -8,9 +8,9 @@ function Contact() {
   const form = useRef<HTMLFormElement>(null);
 
   function sendEmail(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault(); 
+    e.preventDefault();
 
-    if (!form.current) return; 
+    if (!form.current) return;
 
     emailjs
       .sendForm(
@@ -45,33 +45,9 @@ function Contact() {
                 <h2 className="text-dark mb-6 text-[32px] dark:text-primary lg:text-start text-center font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                   LETS GET IN TOUCH
                 </h2>
-                <p className="text-body-color mb-9 text-base leading-relaxed dark:text-gray-400">
-                  Thank you for considering contacting me. If you have any
-                  questions, comments, or inquiries, please feel free to fill
-                  out the form below and I will get back to you as soon as
-                  possible.
-                </p>
-                <div className="mb-8 flex w-full max-w-[370px]">
-                  <div className="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      className="fill-current"
-                    >
-                      <path d="M21.8182 24H16.5584C15.3896 24 14.4156 23.0256 14.4156 21.8563V17.5688C14.4156 17.1401 14.0649 16.7893 13.6364 16.7893H10.4026C9.97403 16.7893 9.62338 17.1401 9.62338 17.5688V21.8173C9.62338 22.9866 8.64935 23.961 7.48052 23.961H2.14286C0.974026 23.961 0 22.9866 0 21.8173V8.21437C0 7.62972 0.311688 7.08404 0.818182 6.77223L11.1039 0.263094C11.6494 -0.0876979 12.3896 -0.0876979 12.9351 0.263094L23.2208 6.77223C23.7273 7.08404 24 7.62972 24 8.21437V21.7783C24 23.0256 23.026 24 21.8182 24ZM10.3636 15.4251H13.5974C14.7662 15.4251 15.7403 16.3995 15.7403 17.5688V21.8173C15.7403 22.246 16.0909 22.5968 16.5195 22.5968H21.8182C22.2468 22.5968 22.5974 22.246 22.5974 21.8173V8.25335C22.5974 8.13642 22.5195 8.01949 22.4416 7.94153L12.1948 1.4324C12.0779 1.35445 11.9221 1.35445 11.8442 1.4324L1.55844 7.94153C1.44156 8.01949 1.4026 8.13642 1.4026 8.25335V21.8563C1.4026 22.285 1.75325 22.6358 2.18182 22.6358H7.48052C7.90909 22.6358 8.25974 22.285 8.25974 21.8563V17.5688C8.22078 16.3995 9.19481 15.4251 10.3636 15.4251Z" />
-                    </svg>
-                  </div>
-                  <div className="w-full">
-                    <h4 className="text-dark mb-1 text-xl font-bold dark:text-primary">
-                      Address
-                    </h4>
-                    <p className="text-body-color text-base">
-                      Mumbai, MH India{" "}
-                    </p>
-                  </div>
-                </div>
-              
+
+
+
                 <div className="mb-8 flex w-full overflow-hidden">
                   <div className="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
                     <svg
@@ -88,10 +64,10 @@ function Contact() {
                       Email Address
                     </h4>
                     <Link
-                      href="mailto:mayur.jadhav.dev@gmail.com"
+                      href="mailto:mayurshrikantjadhav@gmail.com"
                       className="text-body-color text-base"
                     >
-                      mayur.jadhav.dev@gmail.com
+                      mayurshrikantjadhav@gmail.com
                     </Link>
                   </div>
                 </div>

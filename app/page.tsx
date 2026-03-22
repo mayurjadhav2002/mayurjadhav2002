@@ -10,9 +10,8 @@ export default function page() {
     <main>
       <Hero />
       <About/>
-      <Techstack/>
+      {/* <Techstack/> */}
       <Projects/>
-      <Certification/>
       <Work/>
       <Contact/>
     </main>

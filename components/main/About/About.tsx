@@ -1,6 +1,36 @@
 import BoxReveal from "@/components/ui/box-reveal";
 import SparklesText from "@/components/ui/sparkles-text";
 import React from "react";
+const paragraphs = [
+	`I grew up experiencing both rural and urban life, and that contrast shaped how I see technology. I became interested in how software can quietly solve real problems, not through perfection, but through resilience when things go wrong.`,
+
+	`As I worked on production through internships and professional roles, my focus shifted. I stopped thinking only about features and started caring about reliability. I became curious about why systems fail, how they recover, and what it takes to make software trustworthy in the real world.`,
+
+	`Outside of engineering, I paint, write poems, and work on screenplays. Writing helps me slow down and notice details. Art teaches me patience and honesty. I am still learning. I am still building. And I am still becoming.`
+];
+const aboutCards = [
+	{
+		title: "Engineer at heart",
+		description:
+			"I spend most of my time building software, but I enjoy working with data and systems just as much. Understanding how things behave beneath the surface matters to me."
+	},
+	{
+		title: "Someone who writes anyway",
+		description:
+			"I write even when the words are imperfect. Writing helps me think clearly, especially when ideas are still forming."
+	},
+	{
+		title: "A quiet artist",
+		description:
+			"Painting is something I keep close to myself. It slows me down and helps me notice details I would otherwise miss."
+	},
+	{
+		title: "Drawn to AI and ethics",
+		description:
+			"I am deeply interested in artificial intelligence, especially in building systems that are responsible, reliable, and genuinely useful to people."
+	}
+];
+
 export default function About() {
 	return (
 		<div>
@@ -11,156 +41,72 @@ export default function About() {
 					<div className='flex flex-col justify-center'>
 						<div className='max-w-xl mb-6'>
 							<div className='text-base md:text-lg break-normal'>
-								<div className="lg:hidden md:hidden">
-								<p>
-										I was born in Devrukh, Maharashtra, and
-										raised in Mumbai, which gave me the
-										unique opportunity to experience both
-										rural and urban life from a young age.
-										This dual perspective sparked my
-										curiosity about development and how
-										technology can bridge gaps between
-										different worlds, solving real-life
-										challenges and making things better. My
-										fascination with innovation and
-										problem-solving ultimately led me to
-										pursue engineering. I completed my
-										Bachelor of Engineering degree at the
-										University of Mumbai, where I laid the
-										foundation for my journey into the world
-										of software development.
-									</p>
-								</div>
-								<div className="hidden lg:block">
-								<BoxReveal boxColor={"#5046e6"} duration={0.3}>
-									<p>
-										I was born in Devrukh, Maharashtra, and
-										raised in Mumbai, which gave me the
-										unique opportunity to experience both
-										rural and urban life from a young age.
-										This dual perspective sparked my
-										curiosity about development and how
-										technology can bridge gaps between
-										different worlds, solving real-life
-										challenges and making things better. My
-										fascination with innovation and
-										problem-solving ultimately led me to
-										pursue engineering. I completed my
-										Bachelor of Engineering degree at the
-										University of Mumbai, where I laid the
-										foundation for my journey into the world
-										of software development.
-									</p>
-								</BoxReveal>
-								</div>
-								
-								<br></br>
-								<BoxReveal boxColor={"#5046e6"} duration={0.3}>
-									<p>
-										During my college years, I was
-										determined to make the most of every
-										opportunity to grow as a developer. I
-										interned at Cozy Notion and Zevo AI,
-										where I worked on real-world projects
-										that helped sharpen my technical skills
-										and taught me how to collaborate
-										effectively in professional
-										environments. Beyond academics, I took
-										part in hackathons, freelanced on
-										diverse projects, and worked on personal
-										ventures, all of which reinforced my
-										love for building solutions and creating
-										impactful products. This relentless
-										drive to excel and push my limits paved
-										the way for my first professional role
-										as a Junior Software Engineer at
-										Mapsted, where I continue to grow and
-										make meaningful contributions.
-									</p>
-								</BoxReveal>
-								<br></br>
-								<BoxReveal boxColor={"#5046e6"} duration={0.4}>
-									<p>
-										Today, I am proficient in an extensive
-										range of technologies, including
-										TypeScript, React, Node.js, Express.js,
-										Next.js, Prisma, Python, Flask, Redux,
-										REST APIs, GraphQL, and MongoDB. My
-										expertise spans both frontend and
-										backend development, complemented by
-										hands-on experience with infrastructure
-										tools like Git, Docker, AWS, Vercel, and
-										Jira. Whether it’s crafting scalable
-										applications, contributing to innovative
-										products, or solving complex challenges,
-										I remain committed to leveraging
-										technology to make a difference.
-									</p>
-								</BoxReveal>
+								{paragraphs.map((p, i) => (
+									<BoxReveal boxColor={"#312a978f"} key={i} duration={0.3}>
+										<p className="mb-10" key={i}>{p}</p>
+
+									</BoxReveal>
+								))}
+
 							</div>
 						</div>
 					</div>
-					<div className='hidden  md:flex md:flex-col gap-12 '>
-						<iframe
-							title='3D Interactives Spine'
-							className='object-cover w-full h-56 rounded shadow-lg sm:h-96'
-							src='https://my.spline.design/platformerrabbitcopy-54caef73510aa8815b4c72586234c1fa/'
-							width='100%'
-							height='100%'
-						></iframe>
-						<div className='grid gap-5 row-gap-8 sm:grid-cols-2'>
-							<div className='bg-white dark:bg-dark rounded-lg border-l-4 shadow-sm border-deep-purple-accent-400 dark:border-blue-400'>
-								<div className='h-full p-5 border border-l-0 rounded-r'>
-									<h6 className='mb-2 font-semibold leading-5 text-primary'>
-										I&apos;ll be sure to note that in my log
-									</h6>
-									<p className='text-sm '>
-										Do Development most of the time But
-										still very Good playing with Data than
-										the SWE.
-									</p>
-								</div>
-							</div>
+					<div className="hidden md:flex md:flex-col gap-6">
 
-							<div className='bg-white dark:bg-dark rounded-lg border-l-4 shadow-sm border-deep-purple-accent-400 dark:border-blue-400'>
-								<div className='h-full p-5 border border-l-0 rounded-r'>
-									<h6 className='mb-2 font-semibold leading-5 text-primary'>
-										A one who love to write but don&apos;t
-										have grammatical Sense
-									</h6>
-									<p className='text-sm'>
-										I enjoy writing but IDK how to
-										write(Techy-Writer 😎)
-									</p>
-								</div>
-							</div>
+						<div className="text-sm text-neutral-600 dark:text-neutral-400 max-w-md">
+							<p className="font-medium text-neutral-900 dark:text-neutral-200">
+								Interactive Playground (This is Random)
+							</p>
+							<p>
 
-							<div className='bg-white dark:bg-dark rounded-lg border-l-4 shadow-sm border-deep-purple-accent-400 dark:border-blue-400'>
-								<div className='h-full p-5 border border-l-0 rounded-r'>
-									<h6 className='mb-2 font-semibold leading-5 text-primary'>
-										A hidden Artist 🎨
-									</h6>
-									<p className='text-sm'>
-										Most peoples don{`'`}t know that I am a
-										good with paint Brush
-									</p>
-								</div>
-							</div>
+								Feel free to play.
+							</p>
+						</div>
 
-							<div className='bg-white dark:bg-dark rounded-lg border-l-4 shadow-sm border-deep-purple-accent-400 dark:border-blue-400'>
-								<div className='h-full p-5 border border-l-0 rounded-r'>
-									<h6 className='mb-2 font-semibold leading-5 text-primary'>
-										Love for Robots and AI
-									</h6>
-									<p className='text-sm'>
-										I dreamed of Creating Ethical AGI to
-										help humanity
-									</p>
-								</div>
+						<div className="relative rounded-2xl p-[1px] bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400">
+							<div className="rounded-2xl bg-white dark:bg-neutral-900 overflow-hidden shadow-xl">
+								<iframe
+									title="Interactive Experience"
+									className="w-full aspect-video"
+									src="https://my.spline.design/platformerrabbitcopy-54caef73510aa8815b4c72586234c1fa/"
+									allow="fullscreen; autoplay"
+								/>
 							</div>
 						</div>
+
 					</div>
+
 				</div>
+				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+					{aboutCards.map((card, index) => (
+						<AboutCard
+							key={index}
+							title={card.title}
+							description={card.description}
+						/>
+					))}
+				</div>
+			</div>
+		</div>
+	);
+}
+
+
+interface AboutCardProps {
+	title: string;
+	description: string;
+}
+
+function AboutCard({ title, description }: AboutCardProps) {
+	return (
+		<div className="relative rounded-xl p-[1px] bg-gradient-to-b from-indigo-500/60 via-purple-500/60 to-pink-500/60 dark:from-blue-400/40 dark:via-indigo-400/40 dark:to-purple-400/40">
+			<div className="h-full rounded-xl bg-white dark:bg-neutral-900 p-5 shadow-sm">
+				<h6 className="mb-2 font-semibold text-neutral-900 dark:text-neutral-100">
+					{title}
+				</h6>
+				<p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+					{description}
+				</p>
 			</div>
 		</div>
 	);

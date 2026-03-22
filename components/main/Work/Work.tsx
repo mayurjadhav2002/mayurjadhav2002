@@ -23,7 +23,7 @@ const workData: WorkExperience[] = [
     company: "Zevo.ai",
     date: "August 2023 - January 2024",
     imageSrc:
-      "https://www.zevo.ai/_next/image?url=%2Fimages%2Flogo%2Flogo-2.png&w=256&q=75",
+      "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/65ac0b1dcce3d2a0e4ee7c53_zevo-ai-logo.webp",
     fillType: "contain",
   },
   {
@@ -48,9 +48,9 @@ export default function Work() {
   return (
     <div className="pt-8 p-5 z-10 " id="experience">
       <div className="">
-      <h1 className="text-5xl my-10 text-center font-bold tracking-tighter  lg:text-7xl">
-      Work <AuroraText>Experience</AuroraText>
-    </h1>
+        <h1 className="text-5xl mb-10 text-center font-bold tracking-tighter  lg:text-7xl">
+          Work <AuroraText>Experience</AuroraText>
+        </h1>
 
         <div className="grid justify-center mt-5 mb-5">
           {workData.map((work, index) => (

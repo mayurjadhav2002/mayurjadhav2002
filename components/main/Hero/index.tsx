@@ -3,8 +3,8 @@ import React from "react";
 import Link from "next/link";
 import Marque from "./Marque";
 import Typing from "./TypingEffect";
-import {} from "@/components/ui/badge";
-import {HoverBorderGradient} from "@/components/ui/hover-border-gradient";
+import { } from "@/components/ui/badge";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import Image from "next/image";
 function Hero() {
 	return (
@@ -22,23 +22,22 @@ function Hero() {
 								className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider  text-center
                 uppercase bg-teal-accent-400 text-teal-900 md:text-center rounded-full dark:text-primary'
 							>
-								Loves Adventures?
+								Building software where systems, curiosity, and creativity meet.
 							</p>
 							<h1 className='text-5xl lg:text-7xl font-bold text-center text-black dark:text-white font-sans tracking-tight'>
-								👋 Hello, I&apos;m
+								👋 I&apos;m
 								<br className='md:block mt-2 lg:hidden' />
 								<div className='relative ml-5 mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]'>
-									<div className='absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-wrap text-transparent bg-gradient-to-r py-4 from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]'>
+									<div className='absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-wrap text-transparent bg-gradient-to-r py-4 from-blue-200 via-cyan-500 to-yellow-200 [text-shadow:0_0_rgba(0,0,0,0.1)]'>
 										<span className=''>Mayur Jadhav.</span>
 									</div>
-									<div className='relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4'>
+									<div className='relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-blue-500 via-white/50 to-yellow-500 py-4'>
 										<span className=''>Mayur Jadhav.</span>
 									</div>
 								</div>
 							</h1>
 							<p className='text-gray-700 px-2 text-lg text-center md:text-lg dark:text-white'>
-								Human, Software Engineer, AI Enthusiast, and a
-								solitary busy bee.
+								Software Engineer · AI Enthusiast · Writer · Artist
 							</p>
 
 							<div className='flex w-3/5  lg:w-1/5 items-center text-center mx-auto sm:gap-4 md:order-2 gap-3 justify-evenly mt-10 animate__animated animate__zoomInUp'>
